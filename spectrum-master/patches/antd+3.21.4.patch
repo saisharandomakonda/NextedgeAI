@@ -1,0 +1,82 @@
+diff --git a/node_modules/antd/es/menu/index.js b/node_modules/antd/es/menu/index.js
+index a0f2889..c20bb73 100644
+--- a/node_modules/antd/es/menu/index.js
++++ b/node_modules/antd/es/menu/index.js
+@@ -275,7 +275,6 @@ function (_React$Component) {
+         // [Legacy] Old code will return after `openKeys` changed.
+         // Not sure the reason, we should keep this logic still.
+         if (nextProps.inlineCollapsed && !prevProps.inlineCollapsed || nextProps.siderCollapsed && !prevProps.siderCollapsed) {
+-          newState.switchingModeFromInline = true;
+           newState.inlineOpenKeys = prevState.openKeys;
+           newState.openKeys = [];
+         }
+diff --git a/node_modules/antd/es/version/index.js b/node_modules/antd/es/version/index.js
+index c00ca4b..b83b4ed 100644
+--- a/node_modules/antd/es/version/index.js
++++ b/node_modules/antd/es/version/index.js
+@@ -1,3 +1,4 @@
+-import { version } from '../../package.json';
++import packageInfo from '../../package.json';
++const { version } = packageInfo;
+ export default version;
+ //# sourceMappingURL=index.js.map
+diff --git a/node_modules/antd/lib/.DS_Store b/node_modules/antd/lib/.DS_Store
+new file mode 100644
+index 0000000..e69de29
+diff --git a/node_modules/antd/lib/drawer/index.js b/node_modules/antd/lib/drawer/index.js
+index 40d83fb..dc00150 100644
+--- a/node_modules/antd/lib/drawer/index.js
++++ b/node_modules/antd/lib/drawer/index.js
+@@ -199,6 +199,8 @@ function (_React$Component) {
+         open: _this.props.visible,
+         showMask: mask,
+         placement: placement,
++        width,
++        height,
+         style: _this.getRcDrawerStyle(),
+         className: (0, _classnames["default"])(wrapClassName, className, haveMask)
+       }), _this.renderBody()));
+diff --git a/node_modules/antd/lib/menu/index.js b/node_modules/antd/lib/menu/index.js
+index 1255bd7..7c0a572 100644
+--- a/node_modules/antd/lib/menu/index.js
++++ b/node_modules/antd/lib/menu/index.js
+@@ -298,7 +298,6 @@ function (_React$Component) {
+         // [Legacy] Old code will return after `openKeys` changed.
+         // Not sure the reason, we should keep this logic still.
+         if (nextProps.inlineCollapsed && !prevProps.inlineCollapsed || nextProps.siderCollapsed && !prevProps.siderCollapsed) {
+-          newState.switchingModeFromInline = true;
+           newState.inlineOpenKeys = prevState.openKeys;
+           newState.openKeys = [];
+         }
+diff --git a/node_modules/antd/lib/select/index.js b/node_modules/antd/lib/select/index.js
+index 7040176..7ca1cd8 100644
+--- a/node_modules/antd/lib/select/index.js
++++ b/node_modules/antd/lib/select/index.js
+@@ -72,7 +72,8 @@ var SelectPropTypes = {
+   optionLabelProp: PropTypes.string,
+   transitionName: PropTypes.string,
+   choiceTransitionName: PropTypes.string,
+-  id: PropTypes.string
++  id: PropTypes.string,
++  duplicatesAllowed: PropTypes.bool
+ }; // => It is needless to export the declaration of below two inner components.
+ // export { Option, OptGroup };
+ 
+@@ -110,6 +111,7 @@ function (_React$Component) {
+           clearIcon = _a.clearIcon,
+           menuItemSelectedIcon = _a.menuItemSelectedIcon,
+           showArrow = _a.showArrow,
++          duplicatesAllowed = _a.duplicatesAllowed,
+           restProps = __rest(_a, ["prefixCls", "className", "size", "mode", "getPopupContainer", "removeIcon", "clearIcon", "menuItemSelectedIcon", "showArrow"]);
+ 
+       var rest = (0, _omit["default"])(restProps, ['inputIcon']);
+@@ -151,7 +153,8 @@ function (_React$Component) {
+         removeIcon: finalRemoveIcon,
+         clearIcon: finalClearIcon,
+         menuItemSelectedIcon: finalMenuItemSelectedIcon,
+-        showArrow: showArrow
++        showArrow: showArrow,
++        duplicatesAllowed: duplicatesAllowed
+       }, rest, modeConfig, {
+         prefixCls: prefixCls,
+         className: cls,

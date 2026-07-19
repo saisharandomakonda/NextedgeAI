@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis-syncari
+    ports:
+      - "6379:6379"
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo-syncari
+    ports:
+      - "27017:27017"
+
+  backend:
+    build:
+      context: ./backend-master
+    container_name: backend-syncari
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+      - mongo
+    environment:
+      - SPRING_PROFILES_ACTIVE=local
+
+  proxy:
+    build:
+      context: ./spectrum-master/proxy
+    container_name: proxy-syncari
+    ports:
+      - "8088:8088"
+    environment:
+      - ARCADE_TARGET=http://backend:8080
+      - DISABLE_XSRF=true
+      - SECURE_COOKIES=false
+      - ARCADE_LOG_LEVEL=debug
+      - SPECTRUM_PORT=8088
+    depends_on:
+      - backend
+
+  frontend:
+    build:
+      context: ./spectrum-master
+    container_name: frontend-syncari
+    ports:
+      - "3000:3000"
+    depends_on:
+      - proxy
