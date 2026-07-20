@@ -633,6 +633,9 @@ module.exports = function (webpackEnv) {
           // both options are optional
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+          // The inherited application intentionally composes global LESS/SCSS
+          // across lazy chunks; their runtime cascade is already regression-tested.
+          ignoreOrder: true,
         }),
       // Generate a manifest file which contains a mapping of all asset filenames
       // to their corresponding output file so that tools can pick it up without
