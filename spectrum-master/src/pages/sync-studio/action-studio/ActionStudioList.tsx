@@ -30,6 +30,7 @@ import {
 } from 'store/custom-action/api';
 import { showCustomActionWizard, showCustomActionShare } from 'store/custom-action/slice';
 import { CustomActionPayload } from 'store/custom-action/types';
+import { nextEdgeHelpUrl } from 'utils/Branding';
 import { AllPermissions } from 'utils/PermissionsConstants';
 import { filterItems } from 'utils/StringUtil';
 
@@ -50,8 +51,7 @@ export const DEFAULT_ACTION_ICON = '/assets/icons/actions/custom-action-default.
 const statusesForApprovedAction = ['approved', 'published', 'published_with_draft'];
 const statusesForDraftAction = ['new', 'published_with_draft'];
 
-const CUSTOM_ACTION_SUPPORT_PAGE =
-  'https://support.syncari.com/hc/en-us/articles/4416904690964-Creating-Custom-Actions';
+const CUSTOM_ACTION_SUPPORT_PAGE = nextEdgeHelpUrl('creating-custom-actions');
 
 export interface ActionStudioListProps {
   showCustomAction: (visible: boolean, action?: CustomActionPayload) => void;

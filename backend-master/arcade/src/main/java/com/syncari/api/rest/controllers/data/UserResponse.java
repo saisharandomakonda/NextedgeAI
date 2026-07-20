@@ -22,7 +22,7 @@ public class UserResponse {
     private String orgLogo;
     private String orgType;
     private String currentInstanceName;
-    private String currentInstanceSyncariId;
+    private String currentInstanceNextEdgeId;
     private InstanceType currentInstanceType;
     private String firstName;
     private String lastName;

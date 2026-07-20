@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Welcome to Syncari</title>
+        <title>Welcome to NextEdge AI</title>
         <style>
             /* -------------------------------------
         RESPONSIVE AND MOBILE FRIENDLY STYLES
@@ -222,7 +222,7 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                    A Syncari administrator has revoked a role from your account in the Syncari instance {{instance_name}}.
+                                                    A NextEdge AI administrator has revoked a role from your account in the NextEdge AI instance {{instance_name}}.
                                                 </p>
 												<p
                                                     style="
@@ -233,7 +233,7 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                    To access another Syncari instance for this user, go to <a href="https://www.syncari.com">Syncari</a>.
+                                                    To access another NextEdge AI instance for this user, go to <a href="/">NextEdge AI</a>.
                                                 </p>
 												<p
                                                     style="
@@ -244,7 +244,7 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                    If you have any questions, please contact <a href="mailto:support@syncari.com">support@syncari.com</a>.
+                                                    If you have any questions, please contact your NextEdge AI administrator.
                                                 </p>
                                             </td>
                                         </tr>
@@ -307,14 +307,14 @@
                                     >
                                         Sent by
                                         <a
-                                            href="https://www.syncari.com"
+                                            href="/"
                                             style="
                                                 text-decoration: underline;
                                                 color: #999999;
                                                 font-size: 12px;
                                                 text-align: center;
                                             "
-                                            >Syncari</a
+                                            >NextEdge AI</a
                                         >
                                     </td>
                                 </tr>
@@ -331,11 +331,11 @@
                                             text-align: center;
                                         "
                                     >
-                                        <a href="https://app.syncari.com/profile/notification" style="color: #999999; font-size: 12px; text-align: center"
+                                        <a href="/" style="color: #999999; font-size: 12px; text-align: center"
                                             >Preferences</a
                                         >
                                         &bull;
-                                        <a href="https://support.syncari.com" style="color: #999999; font-size: 12px; text-align: center"
+                                        <a href="/" style="color: #999999; font-size: 12px; text-align: center"
                                             >Support</a
                                         >
                                     </td>

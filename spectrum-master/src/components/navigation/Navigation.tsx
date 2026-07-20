@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019-Present Syncari - All rights reserved.
+// NextEdge AI private application.
 //
 import { useLocation } from '@reach/router';
 import { Layout } from 'antd';
@@ -102,7 +102,7 @@ export const SyncariLogo = ({ isCollapsed, onClick, isBrandingEnabled }: Syncari
                   aria-labelledby={tn('logo')}
                   onClick={onClick}
                 />
-                <span className="powered-by">--powered by Syncari</span>
+                <span className="powered-by">— powered by NextEdge AI</span>
               </>
             )}
           </>

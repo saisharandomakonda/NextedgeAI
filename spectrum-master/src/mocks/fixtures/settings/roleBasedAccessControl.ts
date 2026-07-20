@@ -84,7 +84,7 @@ export const rbacRoleDetailFixture: UserRole = {
       createdAt: 'null',
       createdBy: 'null',
       currentInstanceName: 'null',
-      currentInstanceSyncariId: 'null',
+      currentInstanceNextEdgeId: 'null',
       currentInstanceType: 'sandbox',
       email: 'com',
       firstName: '',

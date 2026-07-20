@@ -350,7 +350,7 @@ export function getProfile(): PromiseThunkAction {
       .then((resp) => {
         // Store the instanceId in localStorage. Other tabs are listening and
         // will show a modal to refresh if this changes.
-        localStorage.setItem(LOCAL_STORAGE_INSTANCE_ID, resp.data.currentInstanceSyncariId);
+        localStorage.setItem(LOCAL_STORAGE_INSTANCE_ID, resp.data.currentInstanceNextEdgeId);
         return dispatch(getProfileFulfilled(resp.data));
       })
       .catch(handleAsApplicationError(dispatch));

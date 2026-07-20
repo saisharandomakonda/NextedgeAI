@@ -16,8 +16,8 @@ describe('InstanceCopyModal', () => {
       },
     });
 
-    expect(await screen.findByLabelText('Source Instance (Syncari ID)')).toBeVisible();
-    expect(await screen.findByLabelText('Destination Instance (Syncari ID)')).toBeVisible();
+    expect(await screen.findByLabelText('Source Instance (NextEdge ID)')).toBeVisible();
+    expect(await screen.findByLabelText('Destination Instance (NextEdge ID)')).toBeVisible();
   });
 
   it('should render render one text input field and one dropdown in the ADMIN modal', async () => {
@@ -41,7 +41,7 @@ describe('InstanceCopyModal', () => {
       },
     });
 
-    expect(await screen.findByLabelText('Source Instance (Syncari ID)')).toBeDisabled();
+    expect(await screen.findByLabelText('Source Instance (NextEdge ID)')).toBeDisabled();
     expect(await screen.findByText('TEST_INSTANCE_2')).toBeVisible();
   });
 });

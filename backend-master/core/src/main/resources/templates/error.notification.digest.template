@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Welcome to Syncari</title>
+        <title>Welcome to NextEdge AI</title>
         <style>
             /* -------------------------------------
         RESPONSIVE AND MOBILE FRIENDLY STYLES
@@ -323,7 +323,7 @@
                                                         <p>
                                                             There are {{ additionalNotificationsCount }} more
                                                             notifications not displayed in this email. To view them, log
-                                                            in to Syncari.
+                                                            in to NextEdge AI.
                                                         </p>
                                                         <p>
                                                             <a
@@ -396,14 +396,14 @@
                                     >
                                         Sent by
                                         <a
-                                            href="https://www.syncari.com"
+                                            href="/"
                                             style="
                                                 text-decoration: underline;
                                                 color: #999999;
                                                 font-size: 12px;
                                                 text-align: center;
                                             "
-                                            >Syncari</a
+                                            >NextEdge AI</a
                                         >
                                     </td>
                                 </tr>
@@ -420,11 +420,11 @@
                                             text-align: center;
                                         "
                                     >
-                                        <a href="https://app.syncari.com/settings/notifications/email" style="color: #999999; font-size: 12px; text-align: center"
+                                        <a href="/" style="color: #999999; font-size: 12px; text-align: center"
                                             >Preferences</a
                                         >
                                         &bull;
-                                        <a href="https://support.syncari.com" style="color: #999999; font-size: 12px; text-align: center"
+                                        <a href="/" style="color: #999999; font-size: 12px; text-align: center"
                                             >Support</a
                                         >
                                     </td>

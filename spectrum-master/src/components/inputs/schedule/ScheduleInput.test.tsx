@@ -50,9 +50,11 @@ describe('ScheduleInput', () => {
     await userEvent.click(screen.getByTestId('hour-minutes-select'));
     await userEvent.click(screen.getByRole('option', { name: '59' }));
 
-    const date = moment().tz(timezone);
-    date.seconds(0);
-    date.minutes(59);
+    const now = moment().tz(timezone);
+    const date = now.clone().seconds(0).minutes(59);
+    if (!date.isAfter(now)) {
+      date.add(1, 'hour');
+    }
 
     expect(screen.getByText('Next Sync (Local): ' + date.format(SHORT_DATE_TIME_TZ_DISPLAY_FORMAT))).toBeVisible();
     expect(screen.getByText('Next Sync (UTC): ' + date.utc().format(SHORT_DATE_TIME_TZ_DISPLAY_FORMAT))).toBeVisible();

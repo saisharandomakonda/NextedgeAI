@@ -86,7 +86,7 @@ const renderUserList = (userOptions?: UserState) =>
         lastName: 'User',
         email: 'user@test.com',
         users: testUsers,
-        currentInstanceSyncariId: testInstances[0].syncariId,
+        currentInstanceNextEdgeId: testInstances[0].syncariId,
         currentInstanceName: testInstances[0].name,
         currentInstanceType: testInstances[0].type,
         instances: testInstances,

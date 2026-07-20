@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ fromUser }} has invited you to Syncari</title>
+    <title>{{ fromUser }} has invited you to NextEdge AI</title>
     <style>
     /* -------------------------------------
         RESPONSIVE AND MOBILE FRIENDLY STYLES
@@ -113,19 +113,19 @@
                         <p style="text-align: left; font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
                           Hello,<br><br>
 
-                          Thank you for signing up for a free 30-day trial of Syncari. You’re just a few steps away from unifying your data— no code needed.
+                          Thank you for signing up for a free 30-day trial of NextEdge AI. You’re just a few steps away from unifying your data— no code needed.
                           <br><br>
                           Here’s how to get started:</p>
                           <ul style="text-align: left; padding-inline-start: 20px;">
                             <li>Activate your account – Validate your email at <a href="{{ url }}">this link</a> to get started</li>
-                            <li>Take a <a href="https://academy.syncari.com/trainings">quick tour</a> – Visit Syncari Academy for our 101 course</li>
-                            <li>Explore <a href="https://support.syncari.com/hc/en-us/articles/360052615051-Introduction-to-Syncari-Agentic-MDM">documentation</a> – See what Syncari can do</li>
+                            <li>Take a <a href="/">quick tour</a> – Visit NextEdge AI Academy for our 101 course</li>
+                            <li>Explore <a href="/">documentation</a> – See what NextEdge AI can do</li>
                           </ul>
                           <p style="text-align: left; font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
                           Questions? Just reply to this email — we’re here to help.<br><br>
                           Cheers,
                           <br><br>
-                          The Syncari Team
+                          The NextEdge AI Team
                         </p>
                       </td>
                     </tr>
@@ -139,7 +139,7 @@
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    Sent by <a href="https://www.syncari.com" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Syncari</a>
+                    Sent by <a href="/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">NextEdge AI</a>
                   </td>
                 </tr>
                 <tr>

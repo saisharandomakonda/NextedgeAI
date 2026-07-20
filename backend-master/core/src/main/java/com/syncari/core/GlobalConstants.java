@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.http.MediaType;
 
 public class GlobalConstants {
-    public static final String SYNCARI_LOGO = "%s/syncari-logo_2X.png";
+    public static final String SYNCARI_LOGO = "%s/assets/icons/nextedge-mark.svg";
     public static final String USER_LOGO = "%s/user-add_2X.png";
     public static final String PASSWORD_LOGO = "%s/password_2X.png";
     public static final String THUMBS_UP_LOGO = "%s/thumbs-up.png";

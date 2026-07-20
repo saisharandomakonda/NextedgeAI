@@ -23,7 +23,7 @@ describe('QuickStartPublish', () => {
         userRoles: {
           TULFLY: [CapConstants.ADMIN],
         },
-        currentInstanceSyncariId: 'TULFLY',
+        currentInstanceNextEdgeId: 'TULFLY',
       },
     };
     const { findByText, queryByText } = render(<QuickStartPublish visible quickStartId={''} />, {
@@ -43,7 +43,7 @@ describe('QuickStartPublish', () => {
         userRoles: {
           TULFLY: [CapConstants.ADMIN, CapConstants.SUPER_ADMIN],
         },
-        currentInstanceSyncariId: 'TULFLY',
+        currentInstanceNextEdgeId: 'TULFLY',
       },
     };
     const { findByText, queryByText } = render(<QuickStartPublish visible quickStartId={''} />, {
@@ -63,7 +63,7 @@ describe('QuickStartPublish', () => {
         userRoles: {
           TULFLY: [CapConstants.SUPER_ADMIN],
         },
-        currentInstanceSyncariId: 'TULFLY',
+        currentInstanceNextEdgeId: 'TULFLY',
       },
     };
     const { findByText, queryByText } = render(<QuickStartPublish visible quickStartId={''} />, {

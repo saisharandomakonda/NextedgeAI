@@ -157,7 +157,7 @@ const LineChart = <T extends LineChartDatum = LineChartDatum>({
           // get keys provided for each series of data. We will need this for a few places,
           // namely showing the labels in the tooltip properly
           // TODO: remove hardcoding for series label, provide as config. Right now we only have 1 data series
-          const seriesLabel = 'Syncari';
+          const seriesLabel = 'NextEdge AI';
           return (
             <div className="syncari-datavis-tooltip">
               <Stack>

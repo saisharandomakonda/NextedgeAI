@@ -14,7 +14,7 @@ export async function identifyUser(currentUser: UserState) {
     email: currentUser.email,
     first_name: currentUser.firstName,
     in_trial: currentUser.currentInstanceType === 'trial',
-    instance_id: currentUser.currentInstanceSyncariId,
+    instance_id: currentUser.currentInstanceNextEdgeId,
     instance_type: currentUser.currentInstanceType,
     last_name: currentUser.lastName,
     signed_up_at: currentUser.createdAt,

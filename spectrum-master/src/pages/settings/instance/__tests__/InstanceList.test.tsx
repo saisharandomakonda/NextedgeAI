@@ -44,7 +44,7 @@ const renderInstanceList = (options?: TestOptions) =>
         ],
       },
       user: {
-        currentInstanceSyncariId: 'asdf',
+        currentInstanceNextEdgeId: 'asdf',
         userRoles: { asdf: options?.roles ?? [CapConstants.ADMIN] },
         currentInstanceType: options?.instanceType ?? 'sandbox',
         privileges: [AllPermissions.ADD_INSTANCE, AllPermissions.DELETE_INSTANCE],

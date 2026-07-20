@@ -119,7 +119,7 @@ public class ObjectTransformer {
         dto.setOrgLogo(SyncariContext.getOrganziation().getLogoLocation());
         dto.setOrgType(SyncariContext.getOrganziation().getOrgType().name());
         dto.setCurrentInstanceName(SyncariContext.getInstance().getDisplayName());
-        dto.setCurrentInstanceSyncariId(SyncariContext.getInstance().getSyncariId());
+        dto.setCurrentInstanceNextEdgeId(SyncariContext.getInstance().getNextEdgeId());
         dto.setCurrentInstanceType(SyncariContext.getInstance().getType());
         dto.setStatus(user.getStatus());
         dto.setCreatedAt(user.getCreatedAt());

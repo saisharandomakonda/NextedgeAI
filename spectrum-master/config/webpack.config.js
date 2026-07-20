@@ -285,7 +285,7 @@ module.exports = function (webpackEnv) {
         .map((ext) => `.${ext}`)
         .filter((ext) => useTypeScript || !ext.includes('ts')),
       alias: {
-        process: 'process/browser',
+        process: require.resolve('process/browser.js'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
         'react-native': 'react-native-web',
@@ -523,7 +523,7 @@ module.exports = function (webpackEnv) {
     plugins: [
       new ESLintPlugin({}),
       new webpack.ProvidePlugin({
-        process: 'process/browser',
+        process: require.resolve('process/browser.js'),
       }),
       isEnvDevelopment && new ReactRefreshWebpackPlugin(),
       // Generates an `index.html` file with the <script> injected.

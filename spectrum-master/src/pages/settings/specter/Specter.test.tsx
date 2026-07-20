@@ -16,7 +16,7 @@ const renderPage = (roles?: string[]) =>
   render(<Specter />, {
     testState: {
       specter: { enableSpecterDebuggingStatus: false },
-      user: { userRoles: { asdf: roles ?? [CapConstants.SUPER_ADMIN] }, currentInstanceSyncariId: 'asdf' },
+      user: { userRoles: { asdf: roles ?? [CapConstants.SUPER_ADMIN] }, currentInstanceNextEdgeId: 'asdf' },
     },
   });
 
@@ -31,8 +31,8 @@ describe('CredentialList.tsx', () => {
   it('can fill out form and trigger setOauth action', async () => {
     renderPage();
 
-    await userEvent.type(await screen.findByLabelText('From Syncari ID'), 'old');
-    await userEvent.type(await screen.findByLabelText('To Syncari ID'), 'new');
+    await userEvent.type(await screen.findByLabelText('From NextEdge ID'), 'old');
+    await userEvent.type(await screen.findByLabelText('To NextEdge ID'), 'new');
     await userEvent.click(await screen.findByText('Set Impartner Oauth'));
 
     await waitFor(() => expect(ajaxMock.post).toHaveBeenCalledTimes(1));

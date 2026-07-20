@@ -28,7 +28,7 @@ export interface EnhancedInstanceState {
 export const useCurrentInstanceState = (): EnhancedInstanceState => {
   const dispatch = useEnhancedDispatch();
   const currentInstanceState = useEnhancedSelector<InstanceState>((state) => state.instance.currentInstanceState);
-  const userInstanceId = useEnhancedSelector((state) => state.user.currentInstanceSyncariId);
+  const userInstanceId = useEnhancedSelector((state) => state.user.currentInstanceNextEdgeId);
   const isTrialUser = useIsTrialUser();
 
   const hasInstanceId = Boolean(userInstanceId);

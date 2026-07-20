@@ -631,7 +631,7 @@ const mapStateToProps = (state: RootState, props) => ({
   connectorCreating: state.connector.connectorCreating,
   createdConnectorId: state.connector.createdConnectorId,
   addConnectorNode: state.connector.addConnectorNode,
-  instanceId: state.user.currentInstanceSyncariId,
+  instanceId: state.user.currentInstanceNextEdgeId,
   preferenceErrorMessage: state.user.preferenceErrorMessage,
   preferenceSaving: state.user.preferenceSaving,
 });

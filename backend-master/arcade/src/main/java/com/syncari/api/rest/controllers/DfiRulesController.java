@@ -85,7 +85,7 @@ public class DfiRulesController {
             publisher.publishToViperQueue(eventString);
         } catch (Exception e) {
             log.error(e.getMessage());
-            throw new SyncariValidationException("Error during recomputing data fitness index scores. Please contact Syncari support", e);
+            throw new SyncariValidationException("Error while recomputing data fitness index scores. Please contact NextEdge AI support.", e);
         }
         return new DfiRuleAssignmentDTO(service, schemaService).toDto(dra, DfiRuleAssignmentDTO.class);
     }

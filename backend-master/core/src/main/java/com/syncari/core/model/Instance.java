@@ -26,7 +26,13 @@ public class Instance extends Audit {
 	private Status status;
 	private List<Quota> quota = new ArrayList<>();
 	private List<String> featureIds = new ArrayList<>();
-	@NotNull(message = "Syncari Id is Required")
+	@NotNull(message = "NextEdge ID is required")
+	private String nextEdgeId;
+	/**
+	 * Transitional persisted alias for installations created before the NextEdge ID migration.
+	 * New code must use {@link #getNextEdgeId()}.
+	 */
+	@Deprecated
 	private String syncariId;
 
 	@JsonIgnore
@@ -38,7 +44,8 @@ public class Instance extends Audit {
 	public Instance(String name, String displayName) {
 		this.name = name;
 		this.displayName = displayName;
-		this.syncariId = generateSyncariId();
+		this.nextEdgeId = generateNextEdgeId();
+		this.syncariId = this.nextEdgeId;
 		this.type = InstanceType.production;
 		this.setCreatedAt(new Date());
 	}
@@ -74,8 +81,29 @@ public class Instance extends Audit {
 		return status == null || status == Status.ACTIVE;
 	}
 
-	private static String generateSyncariId() {
+	private static String generateNextEdgeId() {
 		return RandomStringUtils.random(6, true, true).toUpperCase();
+	}
+
+	public String getNextEdgeId() {
+		return StringUtils.isBlank(nextEdgeId) ? syncariId : nextEdgeId;
+	}
+
+	public void setNextEdgeId(String nextEdgeId) {
+		this.nextEdgeId = nextEdgeId;
+	}
+
+	@Deprecated
+	public String getSyncariId() {
+		return getNextEdgeId();
+	}
+
+	@Deprecated
+	public void setSyncariId(String legacyId) {
+		this.syncariId = legacyId;
+		if (StringUtils.isBlank(this.nextEdgeId)) {
+			this.nextEdgeId = legacyId;
+		}
 	}
 
 	public boolean isTrial(){

@@ -50,7 +50,7 @@ const SubscriptionProfile = ({}: RouteComponentProps) => {
   const orgName = useEnhancedSelector((state) => state.user.orgName);
   const orgType = useEnhancedSelector((state) => state.user.orgType);
   const maxInstance = useEnhancedSelector((state) => state.user.maxInstance);
-  const instanceId = useEnhancedSelector((state) => state.user.currentInstanceSyncariId);
+  const instanceId = useEnhancedSelector((state) => state.user.currentInstanceNextEdgeId);
   const { userHasPermission } = useUserHasPermission();
   const { userCan } = useUserRolesForCurrentInstance();
 

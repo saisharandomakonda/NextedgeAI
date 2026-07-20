@@ -2,6 +2,7 @@ import { Icon, Switch, Tooltip } from 'antd';
 
 import InputWithLabel from 'components/inputs/InputWithLabel';
 import { HStack } from 'components/layout';
+import { nextEdgeHelpUrl } from 'utils/Branding';
 import { tNamespaced } from 'utils/i18nUtil';
 import { colors, variables } from 'utils/LessConstants';
 
@@ -12,7 +13,7 @@ import './RealtimePipelineToggle.scss';
 
 const tn = tNamespaced('RealtimePipeline');
 
-const realtimePipelineHelp = 'https://support.syncari.com/hc/en-us/articles/32688129149588-Realtime-Pipeline';
+const realtimePipelineHelp = nextEdgeHelpUrl('realtime-pipeline');
 
 export const RealtimePipelineToggle = () => {
   const { version } = usePipelineSettings();

@@ -18,8 +18,8 @@ const ZENDESK_ATTRS = { id: 'ze-snippet' };
 const BOTCO_AI_API_KEY = process.env.REACT_APP_BOTCO_AI_API_KEY;
 
 const ts = tNamespaced('Support');
-const WORKRAMP_ACADEMY_URL = 'https://academy.syncari.com/login';
-const ZENDESK_URL = process.env.REACT_APP_ZENDESK_URL || 'https://support.syncari.com/hc/en-us/signin';
+const WORKRAMP_ACADEMY_URL = process.env.REACT_APP_ACADEMY_URL || '/help';
+const ZENDESK_URL = process.env.REACT_APP_ZENDESK_URL || '/help';
 
 const BOTCO_AI_WIDGET_URL = 'https://widget.botco.ai/prod/latest/widget.js';
 
@@ -60,7 +60,7 @@ const PopoverMenu = ({ onRequestClose }: { onRequestClose: () => void }) => {
   const zendeskStatus = useScript(`https://static.zdassets.com/ekr/snippet.js?key=${ZENDESK_API_KEY}`, ZENDESK_ATTRS);
   const botcoAiStatus = useScript(BOTCO_AI_WIDGET_URL, { id: 'botcoai-widget' });
   const user = useEnhancedSelector((state) => state.user);
-  const { email, id, firstName, lastName, currentInstanceSyncariId: instanceId } = user;
+  const { email, id, firstName, lastName, currentInstanceNextEdgeId: instanceId } = user;
   const name = `${firstName} ${lastName}`;
 
   const openZendeskWidget = useCallback(() => {

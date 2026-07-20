@@ -13,13 +13,13 @@
 
 import http from 'http';
 import path from 'path';
+import crypto from 'crypto';
 
 import axios from 'axios';
 import bodyParser from 'body-parser';
 import { initialize as initializeControllers } from 'controllers';
 import { initMessageStream } from 'controllers/messageStream';
 import express from 'express';
-import addRequestId from 'express-request-id';
 import morgan from 'morgan';
 import responseTime from 'response-time';
 
@@ -40,7 +40,11 @@ const { spectrumPort, trackResponseTime } = getConfigVariables();
 
 if (trackResponseTime) {
   app.use(responseTime());
-  app.use(addRequestId());
+  app.use((req, res, next) => {
+    req.id = req.get('x-request-id') || crypto.randomUUID();
+    res.set('x-request-id', req.id);
+    next();
+  });
 }
 
 printWelcome();

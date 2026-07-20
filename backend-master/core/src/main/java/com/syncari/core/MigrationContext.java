@@ -273,6 +273,7 @@ public class MigrationContext {
 
     public static void clear() {
         applicationContextThreadLocal.remove();
+        syncariIdLocal.remove();
     }
 
     public static BatchRepo getBatchRepo() {

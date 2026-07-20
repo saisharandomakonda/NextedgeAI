@@ -437,15 +437,19 @@ public class ConnectorHelper {
         AuthField accessKey = new AuthField();
         accessKey.setDataType("password");
         accessKey.setName("accessToken");
-        accessKey.setLabel("Access Key");
+        accessKey.setLabel("Access Key (optional)");
+        accessKey.setRequired(false);
+        accessKey.setHelpSummary("Leave blank to use the AWS workload IAM role.");
         AuthField secretKey = new AuthField();
         secretKey.setDataType("password");
         secretKey.setName("clientSecret");
-        secretKey.setLabel("Secret Key");
+        secretKey.setLabel("Secret Key (optional)");
+        secretKey.setRequired(false);
+        secretKey.setHelpSummary("Leave blank to use the AWS workload IAM role.");
         List<AuthField> fields = new ArrayList<AuthField>();
         fields.add(accessKey);
         fields.add(secretKey);
-        return new AuthMetadata(AuthType.UserPassword, fields, "Access/Secret Key", "");
+        return new AuthMetadata(AuthType.UserPassword, fields, "IAM Role or Access Keys", "Uses the workload IAM role when both key fields are blank.");
     }
     
     public static AuthMetadata getApiKey() {

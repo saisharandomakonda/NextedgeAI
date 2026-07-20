@@ -34,8 +34,9 @@ public class IntacctService implements AuthenticationService, CommonDataService,
     public static final String API_SESSION_ENDPOINT = "https://api.intacct.com/ia/xml/xmlgw.phtml";
     public static final String COMPANY_ID_KEY = "companyId";
     public static final String LOCATION_ID_KEY = "locationId";
-    public static final String SENDER_ID = "SyncariMPP";
-    public static final String SENDER_PWD = "SyncariRocks12#";
+	// Sage Intacct partner credentials must be injected at runtime; never ship shared credentials in source.
+	public static final String SENDER_ID = System.getenv().getOrDefault("NEXTEDGE_INTACCT_SENDER_ID", "");
+	public static final String SENDER_PWD = System.getenv().getOrDefault("NEXTEDGE_INTACCT_SENDER_PASSWORD", "");
 
     static final Set<String> NO_WM_ENTITIES = Set.of("contactversion");
 

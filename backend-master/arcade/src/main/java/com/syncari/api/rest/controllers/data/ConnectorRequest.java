@@ -6,6 +6,7 @@ import com.syncari.core.model.misc.ApiConfig;
 import com.syncari.core.model.misc.ConnectorSetting;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.*;
 
@@ -15,6 +16,7 @@ public class ConnectorRequest {
     private String name;
     private String metadataId;
     private String endpoint;
+    @ToString.Exclude
     private Map<String,String> authConfig = new HashMap<>();
     private ApiConfig apiConfig;
     // TODO when the UI is changed, moved apiLimit and bootstrapWithSyncari to settings

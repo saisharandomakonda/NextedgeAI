@@ -99,6 +99,7 @@ public class MigrateCommand implements Runnable {
             log.info("Migrating Instance {}:{} in Organization {}", instance.getName(), instance.getSyncariId(), organization.getName());
             syncariContextHandler.setContext(instance.getSyncariId());
             MigrationContext.setApplicationContext(applicationContext);
+            MigrationContext.setSyncariId(instance.getSyncariId());
             migrator.migrateCustomers();
         }catch(Exception e){
             log.error(e.getMessage(),e);

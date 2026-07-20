@@ -89,19 +89,19 @@ describe('selectOrg', () => {
 
 describe('selectCurrentInstance', () => {
   test('returns current instance', () => {
-    const currentInstanceSyncariId = '122124124515';
+    const currentInstanceNextEdgeId = '122124124515';
     const currentInstanceName = 'Production';
 
     const state = {
       user: {
         currentInstanceName,
-        currentInstanceSyncariId,
+        currentInstanceNextEdgeId,
       },
     };
 
     const selectedInstance = selectCurrentInstance(state);
 
-    expect(selectedInstance.id).toBe(currentInstanceSyncariId);
+    expect(selectedInstance.id).toBe(currentInstanceNextEdgeId);
     expect(selectedInstance.name).toBe(currentInstanceName);
   });
 });
@@ -120,7 +120,7 @@ describe('selectCurrentInstanceUserRoles', () => {
   test('ADMIN, VIEWER userRoles', () => {
     const state = {
       user: {
-        currentInstanceSyncariId: '12415asfda',
+        currentInstanceNextEdgeId: '12415asfda',
         userRoles: {
           '12415asfda': [CapConstants.VIEWER, CapConstants.ADMIN],
         },
@@ -133,7 +133,7 @@ describe('selectCurrentInstanceUserRoles', () => {
   test('VIEWER userrole', () => {
     const state = {
       user: {
-        currentInstanceSyncariId: '12fda415as',
+        currentInstanceNextEdgeId: '12fda415as',
         userRoles: {
           '12fda415as': [CapConstants.VIEWER],
         },

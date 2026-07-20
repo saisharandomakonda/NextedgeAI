@@ -34,6 +34,7 @@ import { selectTestPanelView } from 'store/test/selectors';
 import { RunLiveTestPayload, TestPanelView } from 'store/test/types';
 import { ENTITY_DRAWER_HEIGHT_OFFSET } from 'styles/style.constants';
 import { replaceItem } from 'utils/ArrayUtil';
+import { nextEdgeHelpUrl } from 'utils/Branding';
 import { getCodeMirrorOptions } from 'utils/CodeMirrorUtil';
 import { PARSABLE_DATE_TIME_FORMAT, SHORT_DATE_TIME_FORMAT } from 'utils/DateUtil';
 import { tNamespaced } from 'utils/i18nUtil';
@@ -555,7 +556,7 @@ const TestRunLivePanel = ({
       absolutePositioning
       title={
         <div className="synri-test-panel__title">
-          {tn('title')} <HelpLink href="https://support.syncari.com/hc/en-us/articles/19620428781716-Run-Live-Test" />
+          {tn('title')} <HelpLink href={nextEdgeHelpUrl('run-live-test')} />
         </div>
       }
       // Larger width to accomodate the test by external id layout

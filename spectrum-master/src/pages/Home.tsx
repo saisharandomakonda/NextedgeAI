@@ -41,9 +41,9 @@ const Home = (props: any) => {
   const passwordExpired = useEnhancedSelector(selectUserPasswordExpired);
   const email = useEnhancedSelector(selectUserEmail);
   const roles = useEnhancedSelector(selectUserRoles);
-  const currentInstanceSyncariId = useEnhancedSelector(selectCurrentInstanceId);
+  const currentInstanceNextEdgeId = useEnhancedSelector(selectCurrentInstanceId);
   const { roles: adminRoles } = useUserRolesForCurrentInstance();
-  const currentInstanceRoles = roles?.[currentInstanceSyncariId] || [];
+  const currentInstanceRoles = roles?.[currentInstanceNextEdgeId] || [];
   const hasOnlyDashboardLightViewerRole =
     currentInstanceRoles.length === 1 && currentInstanceRoles.includes(CapConstants.DASHBOARD_LIGHT_VIEWER);
   const { data: availableDashboards, isLoading: availableDashboardsLoading } = useGetAllSharedDashboardsQuery(
@@ -75,7 +75,7 @@ const Home = (props: any) => {
       );
     }
     const dashboardId =
-      availableDashboards?.find((dashboard) => dashboard.dashboardInstanceId === currentInstanceSyncariId)
+      availableDashboards?.find((dashboard) => dashboard.dashboardInstanceId === currentInstanceNextEdgeId)
         ?.dashboardId || availableDashboards[0]?.dashboardId;
 
     return (

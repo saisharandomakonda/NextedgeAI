@@ -605,7 +605,7 @@ export type User = {
   isGhostUser: boolean;
   isSuperAdmin: boolean;
   syncariDev: boolean;
-  currentInstanceSyncariId: string;
+  currentInstanceNextEdgeId: string;
   currentInstanceName: string;
   currentInstanceType: InstanceType;
   isApiUser: boolean;

@@ -22,7 +22,7 @@ import { MarketingFallbackContent } from './MarketingFallbackContent';
 const { FETCH_STATUS } = AppConstants;
 const UPDATE_FIELD = 'UPDATE_FIELD';
 const LOCAL_STORAGE_KEY = 'marketing-content';
-const privacyPolicyUrl = 'https://syncari.com/privacy-policy/';
+const privacyPolicyUrl = '/privacy';
 
 if (!localStorage.getItem(LOCAL_STORAGE_KEY)) {
   localStorage.setItem(LOCAL_STORAGE_KEY, '');

@@ -63,6 +63,7 @@ export const InsightsViewContextProvider: FC = ({ children }) => {
       !email ||
       !isThoughtSpotEnabled ||
       thoughtspotToken ||
+      !location ||
       !location.pathname.startsWith('/insights-studio/ts') ||
       isThoughtSpotInitialized
     ) {
@@ -106,16 +107,12 @@ export const InsightsViewContextProvider: FC = ({ children }) => {
           },
         },
         style: {
-          customCSSUrl: `${
-            process.env.NODE_ENV === 'development'
-              ? 'https://app.syncari.com'
-              : window.parent.location.origin || 'https://app.syncari.com'
-          }/thoughtspot.css`,
+          customCSSUrl:
+            process.env.REACT_APP_THOUGHTSPOT_CSS_URL || `${window.parent.location.origin}/thoughtspot.css`,
         },
       },
       username: email,
-    })
-      .on(AuthStatus.SDK_SUCCESS, () => {
+    })?.on(AuthStatus.SDK_SUCCESS, () => {
         setIsThoughtspotLoading(false);
         setIsThoughtSpotInitialized(true);
       })

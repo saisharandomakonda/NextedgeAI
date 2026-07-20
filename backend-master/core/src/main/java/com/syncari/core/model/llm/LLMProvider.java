@@ -6,7 +6,7 @@ public enum LLMProvider {
         public String endpoint() {
             return "https://api.openai.com/v1/chat/completions";
         }
-    }, GEMINI, CLAUDE, GROQ_LLAMA3;
+    }, BEDROCK, GEMINI, CLAUDE, GROQ_LLAMA3;
 
     public String endpoint() {
         return null;

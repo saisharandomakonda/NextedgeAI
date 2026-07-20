@@ -25,7 +25,7 @@ const testUser: Partial<UserState> = {
   id: '111',
   email: 'test@test.com',
   firstName: 'Eetsa',
-  currentInstanceSyncariId: 'ABCDEF',
+  currentInstanceNextEdgeId: 'ABCDEF',
   lastName: 'Testman',
   createdAt: '',
   currentInstanceType: 'trial',
@@ -53,7 +53,7 @@ describe('Userflow', () => {
       email: testUser.email,
       first_name: testUser.firstName,
       in_trial: true,
-      instance_id: testUser.currentInstanceSyncariId,
+      instance_id: testUser.currentInstanceNextEdgeId,
       instance_type: testUser.currentInstanceType,
       last_name: testUser.lastName,
       signed_up_at: testUser.createdAt,
@@ -61,7 +61,7 @@ describe('Userflow', () => {
 
     expect(userflow.updateUser).toHaveBeenCalledWith({
       in_trial: true,
-      instance_id: testUser.currentInstanceSyncariId,
+      instance_id: testUser.currentInstanceNextEdgeId,
       instance_type: testUser.currentInstanceType,
     });
   });

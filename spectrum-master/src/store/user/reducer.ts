@@ -104,7 +104,7 @@ export function _getDefaultState() {
     aboutModalVisible: false,
     allRoles: [],
     currentInstanceName: '',
-    currentInstanceSyncariId: '',
+    currentInstanceNextEdgeId: '',
     currentInstanceType: 'production',
     fetchingLoginStatus: FETCH_STATUS.IDLE,
     fetchingUserInstances: FETCH_STATUS.IDLE,

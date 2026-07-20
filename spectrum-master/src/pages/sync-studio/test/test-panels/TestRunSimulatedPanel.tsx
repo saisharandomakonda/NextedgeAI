@@ -32,6 +32,7 @@ import { selectedGetFieldPipelineTestsStatus, selectTestPanelView, selectTests }
 import { PipelineContextTypes, TestPanelView } from 'store/test/types';
 import { ENTITY_DRAWER_HEIGHT_OFFSET, FIELD_DRAWER_HEIGHT_OFFSET } from 'styles/style.constants';
 import AppConstants from 'utils/AppConstants';
+import { nextEdgeHelpUrl } from 'utils/Branding';
 import { tCommon as tc, tNamespaced } from 'utils/i18nUtil';
 
 import TestRunSimulatedTitleModal from '../test-components/TestRunSimulatedTitleModal';
@@ -208,7 +209,7 @@ const TestRunSimulatedPanel = ({ pipelineId, pipelineContext, onSaveChanges, cla
       title={
         <div className="synri-simulated-test-panel__title">
           {tn('title')}{' '}
-          <HelpLink href="https://support.syncari.com/hc/en-us/articles/19621806947860-Run-Simulated-Tests" />
+          <HelpLink href={nextEdgeHelpUrl('run-simulated-tests')} />
         </div>
       }
       visible={visible}>

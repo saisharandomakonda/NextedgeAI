@@ -10,7 +10,7 @@ describe('InstanceSwitcherMenuItem', () => {
       testState: {
         user: {
           currentInstanceName,
-          currentInstanceSyncariId: 'syncari_admin',
+          currentInstanceNextEdgeId: 'syncari_admin',
           currentInstanceType: 'production',
           instances: [
             {
@@ -39,7 +39,7 @@ describe('InstanceSwitcherMenuItem', () => {
       testState: {
         user: {
           currentInstanceName,
-          currentInstanceSyncariId: 'syncari_admin',
+          currentInstanceNextEdgeId: 'syncari_admin',
           currentInstanceType: 'production',
           instances: [
             {
@@ -83,7 +83,7 @@ describe('InstanceSwitcherMenuItem', () => {
       testState: {
         user: {
           currentInstanceName,
-          currentInstanceSyncariId: 'syncari_admin',
+          currentInstanceNextEdgeId: 'syncari_admin',
           currentInstanceType: 'production',
           instances: [
             {

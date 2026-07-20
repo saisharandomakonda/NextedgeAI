@@ -2,7 +2,7 @@
 //
 // Copyright (c) 2019-Present Syncari - All rights reserved.
 //
-import * as Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 
 import AppConstants from 'utils/AppConstants';
 

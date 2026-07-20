@@ -99,7 +99,8 @@ public class ConnectorMetaController {
 
     private static final List<String> allowedCustomSynapseExt = List.of("py", "txt");
     private static final List<String> allowedCustomSynapseContentType = List.of("text/plain", "text/x-python-script", "application/octet-stream", "text/x-python");
-    private static final String articleBaseUrl = "https://syncari.zendesk.com/api/v2/help_center/en-us/articles/%s.json";
+    // External vendor documentation is intentionally disabled in the private white-label build.
+    private static final String articleBaseUrl = "";
 
     @Autowired
     ConnectorService connectorService;
@@ -155,7 +156,7 @@ public class ConnectorMetaController {
     public String getCapabilities(@PathVariable("metaId") String metaId) {
         Optional<ConnectorMetadata> meta = connectorMetadataService.findById(metaId);
         String articleId = dataServiceFactory.getSynapseService(meta.get()).getCapabilitiesArticleId();
-        if(StringUtils.isBlank(articleId)) return "";
+        if(StringUtils.isBlank(articleId) || StringUtils.isBlank(articleBaseUrl)) return "";
         SyncariEntityDataRestClient client = new SyncariEntityDataRestClient();
         RestTemplate restTemplate = client.getTemplate();
         HttpEntity httpEntity = new HttpEntity(client.getHeaders(new AuthConfig()));

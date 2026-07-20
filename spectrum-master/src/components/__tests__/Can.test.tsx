@@ -6,7 +6,7 @@ import { AllPermissions } from 'utils/PermissionsConstants';
 const testState = {
   testState: {
     user: {
-      currentInstanceSyncariId: 'asdf',
+      currentInstanceNextEdgeId: 'asdf',
       userRoles: { asdf: ['allowed' as RoleName, 'not-allowed' as RoleName] },
       privileges: [AllPermissions.ACTION_WRITE],
     },

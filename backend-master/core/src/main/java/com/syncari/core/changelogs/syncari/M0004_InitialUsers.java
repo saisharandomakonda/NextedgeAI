@@ -27,9 +27,9 @@ import com.syncari.core.model.util.Status;
 
 @ChangeLog(order="0004")
 public class M0004_InitialUsers {
-	private static final String DEFAULT_DB = "syncari_admin";
-	public static final String SUPER_ADMIN_EMAIL = "admin@syncari.com";
-	public static final String DEFAULT_ORG_NAME = "Syncari Master";
+	private static final String DEFAULT_DB = "nextedge_admin";
+	public static final String SUPER_ADMIN_EMAIL = System.getenv().getOrDefault("NEXTEDGE_ADMIN_EMAIL", "admin@nextedge.ai");
+	public static final String DEFAULT_ORG_NAME = "NextEdge AI";
 
 	@ChangeSet(order = "001", id = "superAdmin", author = "neelesh")
 	public void addSuperAdmin(MongoTemplate template) {
@@ -37,9 +37,9 @@ public class M0004_InitialUsers {
 		Document admin = users.find(eq("email", SUPER_ADMIN_EMAIL)).first();
 		
 		if (admin == null) {
-			users.insertOne(new Document("email", SUPER_ADMIN_EMAIL).append("password", new BCryptPasswordEncoder().encode("admin"))
+			users.insertOne(new Document("email", SUPER_ADMIN_EMAIL).append("password", new BCryptPasswordEncoder().encode(requiredAdminPassword()))
 					.append("status", Status.ACTIVE.name())
-					.append("isSuperAdmin", true).append("firstName", "Syncari").append("lastName", "Admin")
+					.append("isSuperAdmin", true).append("firstName", "NextEdge").append("lastName", "Admin")
 					.append("seeded", true));
 		}
 		admin = users.find(eq("email", SUPER_ADMIN_EMAIL)).first();
@@ -57,8 +57,10 @@ public class M0004_InitialUsers {
 		
 		Document resource = new Document("type","DATABASE").append("configuration", Map.of("database",DEFAULT_DB));
 		Document instance = new Document("type","production")
-		        .append("name", "Syncari Master Instance")
+		        .append("name", "NextEdge AI Demo")
 				.append("resources", Map.of("DATABASE",resource))
+				.append("nextEdgeId", DEFAULT_DB)
+				// Transitional read compatibility; removed after all existing documents are migrated.
 				.append("syncariId", DEFAULT_DB);
 		org.append("instances", List.of(instance));
 		orgs.insertOne(org);
@@ -80,10 +82,18 @@ public class M0004_InitialUsers {
 		users.insertOne(new Document("email", User.SYSTEM_USER_PREFIX).append("password", new BCryptPasswordEncoder().encode(password))
 				.append("status", Status.ACTIVE.name())
 				.append("systemUser", true)
-				.append("firstName", "Syncari")
+				.append("firstName", "NextEdge")
 				.append("lastName", "System User")
 				.append("status", Status.ACTIVE.name())
 				.append("seeded", true));
+	}
+
+	private static String requiredAdminPassword() {
+		String password = System.getenv("NEXTEDGE_ADMIN_PASSWORD");
+		if (password == null || password.length() < 16) {
+			throw new IllegalStateException("NEXTEDGE_ADMIN_PASSWORD must be supplied and contain at least 16 characters");
+		}
+		return password;
 	}
 	
 }

@@ -33,7 +33,7 @@ function hashConnectorsById(connectorsMetadata) {
 export const selectCurrentConnector = createSelector([getCurrentConnectorId, getConnectors], getCurrentConnector);
 
 const SYNCARI_CONNECTOR_METADATA = {
-  displayName: 'Syncari',
+  displayName: 'NextEdge AI',
   icon: '/assets/icons/syncari-square.svg',
 };
 

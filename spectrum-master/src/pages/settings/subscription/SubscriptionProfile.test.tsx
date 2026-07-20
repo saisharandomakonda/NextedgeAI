@@ -13,7 +13,7 @@ const renderSubProfile = (options?: any) =>
       user: {
         orgId: '123456',
         userRoles: { asdf: options?.roles ?? [CapConstants.SUPER_ADMIN] },
-        currentInstanceSyncariId: 'asdf',
+        currentInstanceNextEdgeId: 'asdf',
         privileges: [AllPermissions.SUB_EDIT],
       },
     },

@@ -46,7 +46,7 @@ const renderMainHeader = (overrides?: any) => {
         firstName: 'FirstName',
         lastName: 'LastName',
         email: 'user@test.com',
-        currentInstanceSyncariId: testInstances[0].syncariId,
+        currentInstanceNextEdgeId: testInstances[0].syncariId,
         currentInstanceName: testInstances[0].displayName,
         currentInstanceType: testInstances[0].type,
         instances: testInstances,

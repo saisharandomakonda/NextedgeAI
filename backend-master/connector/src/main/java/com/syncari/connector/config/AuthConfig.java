@@ -15,7 +15,9 @@ import java.util.Objects;
 @Data
 @AllArgsConstructor
 @Accessors(chain = true)
-@ToString
+@ToString(exclude = {"password", "token", "clientSecret", "accessToken", "refreshToken",
+        "tokenId", "tokenSecret", "consumerKey", "consumerSecret", "codeVerifier",
+        "codeChallenge", "additionalHeaders"})
 public class AuthConfig {
     private String userName;
     private String password;

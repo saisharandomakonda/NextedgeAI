@@ -1,4 +1,4 @@
-﻿package com.syncari.core.service;
+package com.syncari.core.service;
 
 import com.syncari.connector.Constants;
 import com.syncari.connector.EntityData;

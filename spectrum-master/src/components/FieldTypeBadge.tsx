@@ -47,12 +47,12 @@ export interface FieldTypeBadgeProps {
   dataType: FieldDataType;
   description?: string;
   disableTooltip?: true;
-  tooltipProps?: TooltipProps;
+  tooltipProps?: Partial<TooltipProps>;
   size?: FieldTypeBadgeSize;
   children?: React.ReactNode;
 }
 
-const EmptyTooltipProps = {};
+const EmptyTooltipProps: Partial<TooltipProps> = {};
 
 const FieldTypeBadge = ({
   children,

@@ -10,7 +10,7 @@ export interface DateTimeSelectorProps {
   prefix?: ReactElement | string;
   onChange?: (date: Moment) => void;
   value?: Moment;
-  disabledDatePredicate: (date: Moment | undefined) => boolean;
+  disabledDatePredicate: (date: Moment | null) => boolean;
   hasError: boolean | null;
 }
 const DateTimeSelector = ({

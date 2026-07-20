@@ -227,7 +227,7 @@ public class AppConfig {
 	@Value("${syncari.msteams.client.secret}")
 	String msTeamsClientSecret;
 
-	@Value("${syncari.jwt.security.secret}")
+	@Value("${NEXTEDGE_JWT_SECURITY_SECRET:${syncari.jwt.security.secret:}}")
 	String jwtSecret;
 	
 	@Value("${webhook.server.host}")

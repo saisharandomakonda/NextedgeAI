@@ -87,19 +87,19 @@ describe('selectOrg', () => {
 
 describe('selectCurrentInstance', () => {
   test('returns current instance', () => {
-    const currentInstanceSyncariId = '122124124515';
+    const currentInstanceNextEdgeId = '122124124515';
     const currentInstanceName = 'Production';
 
     const state = {
       user: {
         currentInstanceName,
-        currentInstanceSyncariId,
+        currentInstanceNextEdgeId,
       },
     };
 
     const selectedInstance = selectCurrentInstance(state);
 
-    expect(selectedInstance.id).toBe(currentInstanceSyncariId);
+    expect(selectedInstance.id).toBe(currentInstanceNextEdgeId);
     expect(selectedInstance.name).toBe(currentInstanceName);
   });
 });

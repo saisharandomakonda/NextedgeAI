@@ -68,7 +68,8 @@ const reducer = produce((draft: Draft<EntityState>, action: EntityAction | Remov
       break;
     case GET_ENTITIES_FULFILLED:
       draft.entitiesFetching = false;
-      return Object.assign(draft, action.payload);
+      Object.assign(draft, action.payload);
+      break;
     case GET_ENTITIES_FAILED:
       draft.entitiesFetching = false;
       break;
@@ -228,7 +229,7 @@ const reducer = produce((draft: Draft<EntityState>, action: EntityAction | Remov
       draft.quickStartPublishId = action.payload.quickStartId;
       break;
     default:
-      return draft;
+      break;
   }
 }, _getDefaultState());
 

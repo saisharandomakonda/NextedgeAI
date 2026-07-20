@@ -9,7 +9,7 @@ import FieldTypeBadge from './FieldTypeBadge';
 
 import './Token.less';
 
-const TokenTooltipProps: TooltipProps = { className: 'synri-token-tooltip', placement: 'right' };
+const TokenTooltipProps: Partial<TooltipProps> = { className: 'synri-token-tooltip', placement: 'right' };
 
 export type TokenProps = JSX.IntrinsicElements['span'] & {
   onRequestRemove?: () => void;

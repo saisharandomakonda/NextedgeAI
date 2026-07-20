@@ -4,7 +4,7 @@
 import { Button, Modal, Tooltip } from 'antd';
 import { useEffect } from 'react';
 
-import LogoGray from 'assets/images/LogoGray.png';
+import LogoGray from 'assets/images/Logo.svg';
 import useUserLocalMoment from 'hooks/moment';
 import { useEnhancedDispatch, useEnhancedSelector } from 'hooks/redux';
 import { showAboutPage } from 'store/user/actions';
@@ -53,7 +53,7 @@ const AboutModal = () => {
       onOk={close}
       onCancel={close}>
       <div>
-        <img className="login-logo" src={LogoGray} alt="Logo" />
+        <img className="login-logo" src={LogoGray} alt="NextEdge AI" />
       </div>
       <p>
         <b>{`${tn('build_date')} `}</b>

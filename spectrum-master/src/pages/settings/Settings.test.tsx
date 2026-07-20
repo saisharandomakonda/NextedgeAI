@@ -63,7 +63,7 @@ const renderSettings = (options?: RenderOptions) => {
   return render(<Settings location={location} />, {
     testState: {
       user: {
-        currentInstanceSyncariId: 'VGNXFZ',
+        currentInstanceNextEdgeId: 'VGNXFZ',
         userRoles: { VGNXFZ: options?.roles ?? [] },
         ghosted: Boolean(options?.ghosted),
         isSuperAdmin: Boolean(options?.isSuperAdmin ?? true),

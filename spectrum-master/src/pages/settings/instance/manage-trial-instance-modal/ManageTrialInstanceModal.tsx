@@ -93,7 +93,7 @@ export const ManageTrialInstanceModal = () => {
     dispatch(setManageTrialInstanceId(''));
   }, [setInstanceState, dispatch]);
 
-  function disabledDate(current?: Moment) {
+  function disabledDate(current: Moment | null) {
     if (!current) {
       return false;
     }

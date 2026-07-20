@@ -178,7 +178,7 @@ public class MysqlService extends DatabaseService implements SynapseInfoService,
     @Override
     public List<AuthField> getConfigureFields() {
         AuthField bootstrappable = new AuthField().setRequired(false).setDataType("checkbox").setName("bootstrapable")
-                .setLabel("Instantiate with Syncari entities");
+                .setLabel("Instantiate with NextEdge entities");
         AuthField cluster = new AuthField().setRequired(true).setDataType("text").setName(Constants.CLUSTER_NAME)
                 .setLabel("Host");
         AuthField dbName = new AuthField().setRequired(true).setDataType("text").setName(Constants.DATABASE_NAME)

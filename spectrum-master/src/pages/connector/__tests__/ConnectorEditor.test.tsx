@@ -8,13 +8,20 @@ import { DeepPartial } from 'redux';
 import { RootState } from 'reducers';
 import { getMultipleEmptyConnectorMetadata } from 'store/connectors';
 import { GET_ENTITIES_FULFILLED, GET_ENTITIES_PENDING } from 'store/entity/types';
-import { mockedAjaxUtils, renderWithRouter, screen } from 'tests/helpers';
+import { mockedAjaxUtils, renderWithRouter, screen, waitFor } from 'tests/helpers';
 import { configureMockStoreWithReducer } from 'tests/helpers/StoreHelper';
 import AppConstants from 'utils/AppConstants';
 
 import ConnectorEditor from '../ConnectorEditor';
 
-jest.mock('utils/AjaxUtil');
+jest.mock('utils/AjaxUtil', () => {
+  const actual = jest.requireActual('utils/AjaxUtil');
+  return {
+    ...actual,
+    get: jest.fn(),
+    makeBaseQuery: jest.fn(() => jest.fn(async () => ({ data: {} }))),
+  };
+});
 
 describe('Connector Editor', () => {
   test('Renders and get entities after a successful activation', async () => {
@@ -78,11 +85,12 @@ describe('Connector Editor', () => {
 
     expect(await screen.findByText(/Synapse Library/)).toBeInTheDocument();
 
-    expect(store.getActions()).toContainEqual({ type: GET_ENTITIES_PENDING });
-
-    expect(store.getActions()).toContainEqual({
-      type: GET_ENTITIES_FULFILLED,
-      payload: { connections: undefined, connectorId: '', entities: undefined },
+    await waitFor(() => {
+      expect(store.getActions()).toContainEqual({ type: GET_ENTITIES_PENDING });
+      expect(store.getActions()).toContainEqual({
+        type: GET_ENTITIES_FULFILLED,
+        payload: { connections: undefined, connectorId: '', entities: undefined },
+      });
     });
   });
 });

@@ -3,8 +3,8 @@
     "branch_name": "Branch Name: {{branchName}}",
     "build_date": "Build Date:",
     "commit_sha1": "Commit Sha1:",
-    "copyright": "© 2019 - {{currentYear}} Syncari, Inc. - All Rights Reserved.",
-    "syncari": "About Syncari",
+    "copyright": "© 2019 - {{currentYear}} NextEdge AI, Inc. - All Rights Reserved.",
+    "syncari": "About NextEdge AI",
     "version": "Version:"
   },
   "Action": {
@@ -71,7 +71,7 @@
     "delete_title": "Delete this action?",
     "draft": "Draft",
     "edit_draft": "Edit",
-    "empty_authoring_message": "Actions Studio enables you to create custom actions which add unique functionality to Syncari pipelines.",
+    "empty_authoring_message": "Actions Studio enables you to create custom actions which add unique functionality to NextEdge AI pipelines.",
     "global": "Global",
     "loading_actions": "Loading actions",
     "new_action": "Create action",
@@ -99,9 +99,9 @@
     "synapse_field": "Synapse Field",
     "synapse_name": "Synapse Name",
     "sync_direction": "Sync Direction",
-    "sync_from": "Sync to Syncari",
-    "sync_to": "Sync from Syncari",
-    "syncari_entity_field": "Syncari Field",
+    "sync_from": "Sync to NextEdge AI",
+    "sync_to": "Sync from NextEdge AI",
+    "syncari_entity_field": "NextEdge AI Field",
     "unmapped": "Unmapped ({{count}})",
     "view_mapped_fields": "View mapped fields"
   },
@@ -115,7 +115,7 @@
   },
   "AlertInstanceMismatch": {
     "active_instance_name": "Your active instance is \"{{name}}\"",
-    "multiple_syncari_windows_open": "There are multiple open Syncari windows. Please refresh the page to use the active instance."
+    "multiple_syncari_windows_open": "There are multiple open NextEdge AI windows. Please refresh the page to use the active instance."
   },
   "ApiUtil": {
     "server_error_message": "The server encountered a temporary error and could not complete your request. Please try again in 30 seconds."
@@ -133,8 +133,8 @@
     "source_synapse": "Source Synapse",
     "title": "Automap from",
     "basic_search": "Basic Search",
-    "sync_ai": "SyncAI",
-    "tool_tip": "Basic Search matches fields using text search. SyncAI uses OpenAI models to do the matching, and sends field metadata to OpenAI"
+    "sync_ai": "NextEdge AI",
+    "tool_tip": "Basic Search matches fields using text search. NextEdge AI uses OpenAI models to do the matching, and sends field metadata to OpenAI"
   },
   "Banners": {
     "ghosted": "Logged in as {{fullName}} ({{email}}). Haunt with care! 👻"
@@ -164,7 +164,7 @@
     }
   },
   "ChunkLoadError": {
-    "description": "Encountered an error while loading a module that didn't match the version of Syncari you are running. Please reload to load the latest version of Syncari.",
+    "description": "Encountered an error while loading a module that didn't match the version of NextEdge AI you are running. Please reload to load the latest version of NextEdge AI.",
     "reload_btn": "Reload",
     "title": "New version available"
   },
@@ -275,7 +275,7 @@
     "generic_error": "Something went wrong, please try again.",
     "get_started": "Get Started",
     "getting_started": "Getting Started",
-    "go_to_syncari_node": "Go to Syncari node",
+    "go_to_syncari_node": "Go to NextEdge AI node",
     "greyscale": "Greyscale",
     "groups": "Groups",
     "header": "Header",
@@ -389,9 +389,9 @@
     "subscription": "Subscription",
     "summary": "Summary",
     "synapse_name": "Synapse name",
-    "syncari": "Syncari",
-    "syncari_id": "Syncari ID",
-    "syncari_id_label": "Syncari ID: ",
+    "syncari": "NextEdge AI",
+    "syncari_id": "NextEdge ID",
+    "syncari_id_label": "NextEdge ID: ",
     "synced_time": "Synced {{time}}",
     "system": "System",
     "tags": "Tags",
@@ -517,7 +517,7 @@
     "external_field_name": "External field name",
     "no_default_mapping": "No default mapping found for this object.",
     "no_default_mapping_connector": "No default mapping found!",
-    "syncari_field_name": "Syncari field name",
+    "syncari_field_name": "NextEdge AI field name",
     "title": "{{connectorMetadataName}} default mappings"
   },
   "ConnectorDetails": {
@@ -567,7 +567,7 @@
     "loading": "Fetching the latest schema from {{name}} synapse may take a while… Please wait.",
     "search_field": "Search {{title}}",
     "sync_offset": "Sync offset",
-    "title": "Create Syncari Entities"
+    "title": "Create NextEdge AI Entities"
   },
   "ConnectorFieldModal": {
     "api_name": "Api Name",
@@ -611,7 +611,7 @@
     "from_entity": "From Entity",
     "select_entity": "Select Entity",
     "sync_to": "Sync To",
-    "syncari_entity": "Syncari Entity",
+    "syncari_entity": "NextEdge AI Entity",
     "to_entity": "To Entity"
   },
   "ConnectorSyncStatusList": {
@@ -696,14 +696,14 @@
     "edit_entity_schema": "Edit Entity Schema",
     "edit_synapse": "Edit Synapse",
     "edit_synapse_title": "Edit {{name}}",
-    "empty_authoring_message": "Create custom synapses using Syncari's Custom Synapse SDK.",
+    "empty_authoring_message": "Create custom synapses using NextEdge AI's Custom Synapse SDK.",
     "empty_authoring_message_download_sample": "download the sample files.",
     "empty_authoring_message_help_action": "Learn more",
     "global": "Global",
-    "global_scope_help_text_admin": "The synapse accessible to all Syncari customers",
-    "global_scope_help_text_user": "The synapse accessible to all Syncari customers. Please reach out to Syncari support if you'd like to change the scope",
-    "global_share_insufficient_permissions": "Please reach out to Syncari support if you'd like to share this synapse globally.",
-    "global_share_tooltip": "Global synapses are available to all Syncari customers.",
+    "global_scope_help_text_admin": "The synapse accessible to all NextEdge AI customers",
+    "global_scope_help_text_user": "The synapse accessible to all NextEdge AI customers. Please reach out to NextEdge AI support if you'd like to change the scope",
+    "global_share_insufficient_permissions": "Please reach out to NextEdge AI support if you'd like to share this synapse globally.",
+    "global_share_tooltip": "Global synapses are available to all NextEdge AI customers.",
     "global_share_unmutable": "{{displayName}} is already shared globally and cannot be unshared.",
     "global_share_warning": "Once shared globally, this option cannot be undone.",
     "http_synapse": "HTTP Synapse",
@@ -774,7 +774,7 @@
     "sharing_success": "{{name}} shared successfully",
     "sharing_title": "Sharing {{name}}",
     "submit_for_review": "Submit for review",
-    "submit_for_review_description": "Submit your synapse to be reviewed Syncari. After approval you will be able to install this synapse.",
+    "submit_for_review_description": "Submit your synapse to be reviewed NextEdge AI. After approval you will be able to install this synapse.",
     "submitted_error": "{{name}} failed to submit for review.",
     "submitted_success": "{{name}} has been submitted for review.",
     "test_auth_description": "This is an optional step to verify authentication is working for your custom synapse.",
@@ -819,7 +819,7 @@
     "approving": "Approving…",
     "confirmation": "Are you sure you want to approve this Custom Synapse?",
     "title": "Approve Global Synapse",
-    "warning": "The author of this Custom Synapse has requested that the synapse be shared globally. Global synapses are available to all Syncari customers."
+    "warning": "The author of this Custom Synapse has requested that the synapse be shared globally. Global synapses are available to all NextEdge AI customers."
   },
   "CustomSynapseFileUpload": {
     "connector_meta_display_name": "Synapse Display Name",
@@ -834,7 +834,7 @@
     "loading_status": "Loading status…",
     "primary_synapse_file_description": "This python file contains all the logic for your custom synapse.",
     "processing_synapse": "Processing synapse",
-    "requirements_file_description": "Include the syncari-sdk and any other required pip packages in the text file.",
+    "requirements_file_description": "Include the required platform SDK and any other Python packages in the text file.",
     "reupload_files": "Reupload files",
     "select_files_before_uploading": "Select both the main synapse file and requirements file.",
     "select_python_file": "Select a file ending in '.py'",
@@ -1116,23 +1116,23 @@
       "delete_records_btn_with_count_plural": "Delete {{formattedCount}} records",
       "delete_records_global_warning_text": "This operation will delete 1 record in <strong>{{entityName}}</strong> and connected synapses. It cannot be undone",
       "delete_records_global_warning_text_plural": "This operation will delete {{formattedCount}} records in <strong>{{entityName}}</strong> and connected synapses. It cannot be undone",
-      "delete_records_warning_text": "This will delete the 1 record under <strong>{{entityName}}</strong> in Syncari. It cannot be undone",
-      "delete_records_warning_text_plural": "This will delete the {{formattedCount}} records under <strong>{{entityName}}</strong> in Syncari, with the currently applied filter",
+      "delete_records_warning_text": "This will delete the 1 record under <strong>{{entityName}}</strong> in NextEdge AI. It cannot be undone",
+      "delete_records_warning_text_plural": "This will delete the {{formattedCount}} records under <strong>{{entityName}}</strong> in NextEdge AI, with the currently applied filter",
       "delete_request_successful": "Request to delete 1 record for {{entityName}} successful.",
       "delete_request_successful_plural": "Request to delete {{formattedCount}} records for {{entityName}} successful.",
       "fields_title": "Fields",
       "filter_is_required": "You must provide a records filter for this operation",
       "global_delete": "Also delete these records in all the connected Systems",
       "global_delete_plural": "Also delete these records in all the connected Systems",
-      "local_delete": "Delete record in Syncari only",
-      "local_delete_plural": "Delete records in Syncari only",
+      "local_delete": "Delete record in NextEdge AI only",
+      "local_delete_plural": "Delete records in NextEdge AI only",
       "no_field_updates_provided": "No updates provided. To update records, you must provide field data.",
       "no_fields_yet": "No fields added yet",
       "purge_modal_title": "Purge Records ({{entityName}})",
       "purge_records_btn": "Purge records",
       "purge_records_btn_with_count": "Delete {{formattedCount}} record",
       "purge_records_btn_with_count_plural": "Delete {{formattedCount}} records",
-      "purge_records_warning_text": "This will delete All records under <strong>{{entityName}}</strong> in Syncari. It cannot be undone",
+      "purge_records_warning_text": "This will delete All records under <strong>{{entityName}}</strong> in NextEdge AI. It cannot be undone",
       "purge_request_successful": "Request to purge all records for {{entityName}} successful.",
       "scope_title": "Scope",
       "scope_with_filter": "1 record in <strong>{{entityName}}</strong> with the currently applied filter",
@@ -1176,7 +1176,7 @@
     },
     "delete": "Delete",
     "delete_entity": "Delete Data",
-    "delete_entity_content": "Are you sure you want to delete data for this entity? This will remove all records from Syncari. THIS ACTION CANNOT BE UNDONE",
+    "delete_entity_content": "Are you sure you want to delete data for this entity? This will remove all records from NextEdge AI. THIS ACTION CANNOT BE UNDONE",
     "delete_entity_record_global": "Delete Data Permanently",
     "delete_entity_record_message": "Are you sure you want to delete Record Id {{recordId}}?",
     "delete_entity_record_title": "Delete Record",
@@ -1327,7 +1327,7 @@
     "relationships": "Relationships"
   },
   "DownloadSampleModal": {
-    "description": "Dowloading the sample custom SDK synapse will give you a zip file containing the python files for Pipedrive synapse. This can be used as reference to build your own custom synapse. See <a href='https://support.syncari.com/hc/en-us/articles/19314370415892-Custom-Synapse-Overview' target='_blank'>this</a> article for more details.",
+    "description": "Dowloading the sample custom SDK synapse will give you a zip file containing the python files for Pipedrive synapse. This can be used as reference to build your own custom synapse. See <a href='/help' target='_blank'>this</a> article for more details.",
     "title": "Download sample?"
   },
   "EntityEditor": {
@@ -1464,16 +1464,16 @@
   "Error400": {
     "title": "400",
     "bad_request": "Bad Request",
-    "contact_support": "Please contact support@syncari.com if you have further questions",
+    "contact_support": "Please contact your administrator if you have further questions",
     "wrong_address": "You may have typed in the wrong address or the page may have moved."
   },
   "Error504": {
-    "description": "Syncari is temporarily down for maintenance. We'll be back up and running as fast as possible.",
+    "description": "NextEdge AI is temporarily down for maintenance. We'll be back up and running as fast as possible.",
     "title": "Scheduled Maintenance"
   },
   "ErrorUi": {
     "dont_give_up": "Try again, or go to the <a href=\"/\">home page</a>",
-    "error_sent_to_syncari": "An unexpected error occurred, and details have been sent to Syncari.",
+    "error_sent_to_syncari": "An unexpected error occurred, and details have been sent to NextEdge AI.",
     "oops": "Oops!",
     "unexpected_error": "An Unexpected Error Occurred"
   },
@@ -1484,9 +1484,9 @@
     "synapse_field_data_type": "Synapse Field Data Type",
     "synapse_field_display_name": "Synapse Field Name",
     "synapse_type": "Synapse Type",
-    "syncari_field_api_name": "Syncari Field API Name",
-    "syncari_field_data_type": "Syncari Field Data Type",
-    "syncari_field_display_name": "Syncari Field Name"
+    "syncari_field_api_name": "NextEdge AI Field API Name",
+    "syncari_field_data_type": "NextEdge AI Field Data Type",
+    "syncari_field_display_name": "NextEdge AI Field Name"
   },
   "ExternalAction": {
     "authenticate": "Authenticating… Please Wait…",
@@ -1552,7 +1552,7 @@
     "read_only": "Read Only",
     "required": "Required",
     "select_composite_keys": "Select composite keys…",
-    "syncari_field": "Syncari Field",
+    "syncari_field": "NextEdge AI Field",
     "tags": "Tags",
     "unique": "Unique",
     "watermark_field": "Watermark Field"
@@ -1561,13 +1561,13 @@
     "approved_field_cannot_modify": "Approved field cannot be modified.",
     "confirm_delete_field_message": "Are you sure you want to delete the {{fieldName}} field?",
     "delete_field": "Delete Field",
-    "disabled_delete_field_message": "Only Syncari defined fields can be be deleted.",
+    "disabled_delete_field_message": "Only NextEdge AI defined fields can be be deleted.",
     "disabled_edit_syncari_id_watermark": "Id and watermark fields cannot be edited",
     "edit_field": "Edit Field",
     "empty_field_panel_landing_zone": "Select a field to view and modify it here",
     "length": "Length",
     "no_tags": "No Tags",
-    "non_syncari_defined_cannot_modify": "Non syncari defined field cannot be modified",
+    "non_syncari_defined_cannot_modify": "Non-NextEdge AI-defined field cannot be modified",
     "successfully_deleted_field": "Successfully deleted Field"
   },
   "FieldValidator": {
@@ -1768,7 +1768,7 @@
     "dashboard_options": "Dashboard Options",
     "dashboard_placeholder_text": "Drag your data cards here to create powerful dashboards and data visualizations",
     "dashboard_publish": "Publish dashboard?",
-    "dashboard_publish_confirm_text": "Publishing this dashboard will make your changes visible to Syncari users without Insights author privileges.",
+    "dashboard_publish_confirm_text": "Publishing this dashboard will make your changes visible to NextEdge AI users without Insights author privileges.",
     "dashboard_published": "Published dashboard {{dashboard}}",
     "dashboard_updated": "Updated dashboard {{dashboard}}",
     "data_card_added": "Data card added to dashboard",
@@ -1851,7 +1851,7 @@
       "emails_deleted": "{{count}} email address deleted",
       "error_invite": "Error while sending invites",
       "expiry_placeholder": "Select date",
-      "go_back_to_syncari": "Go back to Syncari",
+      "go_back_to_syncari": "Go back to NextEdge AI",
       "invitation_status": "Invitation Status",
       "invite_sent": "Invitations sent",
       "last_visit": "Last Visit",
@@ -1952,7 +1952,7 @@
       "share_insights_title": "Are you sure?",
       "share_insights_confimation": "This will share the current {{type}} with ALL the users inside your instance.",
       "switch_to_legacy_insights": "Switch to Legacy Insights",
-      "filter_tooltip": "To add filters, use dataset as source for the datacard. This datacard was built using a Syncari entity directly, instead create a dataset using the entity.",
+      "filter_tooltip": "To add filters, use dataset as source for the datacard. This datacard was built using a NextEdge AI entity directly, instead create a dataset using the entity.",
       "parameter_tooltip": "To add a parameter in data card, either add the param to Dataset or create formula using param in Datacard."
     },
     "title": "Insights Studio",
@@ -2037,7 +2037,7 @@
   },
   "Login": {
     "back_to_login": "Back to login",
-    "demo": "Need a Syncari account? <a href='https://syncari.com/contactus'>Contact Us</a>.",
+    "demo": "Need a NextEdge AI account? <a href='/'>Contact Us</a>.",
     "done": "Done",
     "enter_password": "Enter your password",
     "enter_username": "Enter your email",
@@ -2103,20 +2103,20 @@
     "remove_selected": "Remove {{count}} selected"
   },
   "MarketingFallbackContent": {
-    "header": "Welcome Back to Syncari",
+    "header": "Welcome Back to NextEdge AI",
     "sub_heading": "Your trusted data and AI control center—unify, govern, and optimize your enterprise data seamlessly.",
     "bullet_1": "🔹 Securely access your account",
     "bullet_2": "🔹 Monitor and manage AI-ready data",
     "bullet_3": "🔹 Ensure real-time governance and observability",
     "bullet_4": "🔹 Sync and master data across all connected systems",
     "bullet_5": "🔹 Empower AI agents with trusted, context-rich data",
-    "learn_more": "👉 New to Syncari? <a href=\"{{link}}\" rel=\"noopener noreferrer\" target=\"_blank\">Learn more.</a>"
+    "learn_more": "👉 New to NextEdge AI? <a href=\"{{link}}\" rel=\"noopener noreferrer\" target=\"_blank\">Learn more.</a>"
   },
   "MergeOptions": {
-    "AFTER_CORE": "Add nodes immediately after Syncari node",
+    "AFTER_CORE": "Add nodes immediately after NextEdge AI node",
     "AFTER_SOURCE": "Add nodes immediately after source nodes",
     "auto_arrange_nodes": "Auto-arrange nodes after installing Quick Start.",
-    "BEFORE_CORE": "Add nodes immediately before Syncari node",
+    "BEFORE_CORE": "Add nodes immediately before NextEdge AI node",
     "BEFORE_SINK": "Add nodes immediately before destination nodes",
     "COPY": "Make a copy of nodes (This may render your pipelines invalid)",
     "default_merge_settings": "Quick Start default merge settings",
@@ -2333,7 +2333,7 @@
   },
   "PipelineDocumentation": {
     "cannot_edit_published": "You cannot make changes to a published entity pipeline document.",
-    "generate": "Generate with SyncAI",
+    "generate": "Generate with NextEdge AI",
     "tos": "By using this feature, you agree to send a summarized version of the pipeline to our generative AI partners, including but not limited to OpenAI, Google and Microsoft."
   },
   "PipelineEditor": {
@@ -2354,7 +2354,7 @@
     "delete_draft_entity_pipeline_versioned": "After deleting you can find and restore this draft in the Versions tab.",
     "delete_draft_field_pipeline": "This action is permanent and cannot be undone.",
     "delete_draft_question": "Delete Draft?",
-    "delete_published_entity_pipeline": "This will <b>permanently delete</b> your entity pipeline, remove it from Syncari along with all associated field pipelines, and stop your data sync.",
+    "delete_published_entity_pipeline": "This will <b>permanently delete</b> your entity pipeline, remove it from NextEdge AI along with all associated field pipelines, and stop your data sync.",
     "delete_published_field_pipeline": "This will <b>permanently delete</b> your field pipeline and data will stop syncing for this field.",
     "delete_published_field_question": "Delete Published Field Pipeline?",
     "delete_published_pipeline": "Delete Published Pipeline",
@@ -2442,8 +2442,8 @@
     "pipeline_type": "Pipeline Type",
     "run_mode": "Run Mode",
     "sync_cycle": "Sync Cycle",
-    "syncari_id": "Syncari Id",
-    "syncari_record": "Syncari Record",
+    "syncari_id": "NextEdge ID",
+    "syncari_record": "NextEdge AI Record",
     "time_taken_in_millisecs": "Time Taken (Milliseconds)",
     "timestamp": "Timestamp"
   },
@@ -2491,10 +2491,10 @@
       "removed": "Node removed from group"
     },
     "GroupValidationErrors": {
-      "core_node": "Syncari node cannot be included in a group",
+      "core_node": "NextEdge AI node cannot be included in a group",
       "destination_mismatch": "Nodes on the source side cannot be added to destination groups",
       "groups_within_groups": "Groups cannot be added to other groups",
-      "invalid_connections": "All nodes in a group must be connected to a source node or the Syncari node",
+      "invalid_connections": "All nodes in a group must be connected to a source node or the NextEdge AI node",
       "multiple_groups": "A node cannot belong to multiple groups",
       "multiple_sides": "Node is connected to both the source and destination pipelines. Please reconfigure.",
       "no_connections": "Connect this node before adding to a group",
@@ -2555,7 +2555,7 @@
   "PlgTrial": {
     "trial_active": "Your free trial has {{count}} day remaining.",
     "trial_active_plural": "Your free trial has {{count}} days remaining.",
-    "trial_ends_today": "Your free trial has less than 1 day remaining. Contact your Syncari rep to extend or upgrade.",
+    "trial_ends_today": "Your free trial has less than 1 day remaining. Contact your NextEdge AI rep to extend or upgrade.",
     "trial_expired": "Your free trial has ended. Your pipelines are paused and certain features are unavailable.",
     "trial_publish_limit_reached": "You've reached the maximum number of running pipelines for your trial.",
     "trial_record_limit_reached": "You've reached the {{limit}} record limit of your free trial."
@@ -2647,7 +2647,7 @@
     "edit_draft": "Edit draft",
     "edit_quick_start": "Edit Quick Start",
     "edit_title": "Edit Quick Start ({{name}})",
-    "empty_authoring_message": "Quick Starts enable you to create drafts and share pipelines and configurations across Syncari instances",
+    "empty_authoring_message": "Quick Starts enable you to create drafts and share pipelines and configurations across NextEdge AI instances",
     "id_copied_to_clipboard": "ID copied to clipboard.",
     "install_title": "Run Quick Start ({{name}})",
     "install_title_default": "New Quickstart",
@@ -2723,7 +2723,7 @@
     "error_deleting_ref_data": "Error deleting Reference Data."
   },
   "ReferenceDataList": {
-    "cannot_mutate_syncari_data": "Syncari reference data cannot be modified.",
+    "cannot_mutate_syncari_data": "NextEdge AI reference data cannot be modified.",
     "confirm_delete_message": "This will immediately remove {{- name}} Reference Data and will not be reversable. Are you sure?",
     "confirm_delete_title": "Are you sure you want to delete {{- name}}?",
     "delete": "Delete",
@@ -2794,8 +2794,8 @@
         "externalRecordId": "External Record Id",
         "occuredTime": "Occurred Date",
         "operation": "Operation",
-        "syncariEntityName": "Syncari Entity Name",
-        "syncariRecordId": "Syncari Record Id"
+        "syncariEntityName": "NextEdge AI Entity Name",
+        "syncariRecordId": "NextEdge AI Record Id"
       },
       "no_data_matches_filter": "No data found for the selected filter",
       "operation": "Operation",
@@ -2808,13 +2808,13 @@
         "external_delete": "External Delete",
         "merge": "Merge",
         "merge_report_only": "Merge (Report only)",
-        "syncari_delete": "Syncari Delete",
+        "syncari_delete": "NextEdge AI Delete",
         "update": "Update"
       },
       "record_id": "Record Id",
       "synapse": "Synapse",
-      "syncari_entity": "Syncari Entity",
-      "syncari_record_id": "Syncari Record Id"
+      "syncari_entity": "NextEdge AI Entity",
+      "syncari_record_id": "NextEdge AI Record Id"
     },
     "system_reports": "System Reports"
   },
@@ -2970,7 +2970,7 @@
     "title": "SDK Info"
   },
   "ServiceWorkerNotification": {
-    "new_version_description": "There's an updated version of Syncari available, please reload at your earliest convenience.",
+    "new_version_description": "There's an updated version of NextEdge AI available, please reload at your earliest convenience.",
     "new_version_title": "New Version",
     "update_btn": "Reload"
   },
@@ -3193,13 +3193,13 @@
       "page_title": "Data Store",
       "port": "Port",
       "provision": "Provision",
-      "provision_failed": "Provision Syncari Data Store Failed : {{errorMessage}}",
-      "provision_modal_description": "Enabling Data Store will allow you to query unified Syncari data via an external BI tool.",
+      "provision_failed": "Provision NextEdge AI Data Store Failed : {{errorMessage}}",
+      "provision_modal_description": "Enabling Data Store will allow you to query unified NextEdge AI data via an external BI tool.",
       "provision_modal_title": "Provision Data Store?",
-      "provision_success": "Provision Syncari Data Store Completed!",
-      "provision_syncari": "Provision Syncari Data Store",
-      "provision_text": "Provision Syncari Data Store",
-      "provisioning": "Provisioning Syncari Data Store",
+      "provision_success": "Provision NextEdge AI Data Store Completed!",
+      "provision_syncari": "Provision NextEdge AI Data Store",
+      "provision_text": "Provision NextEdge AI Data Store",
+      "provisioning": "Provisioning NextEdge AI Data Store",
       "schema": "Schema Name",
       "select_data_store": "Select a data store",
       "status": "Status",
@@ -3240,7 +3240,7 @@
       "no_records_found_email": "No emails are configured. Add to create a email group.",
       "no_records_found_webhook": "No webhooks are configured. Add to create a webhook.",
       "notification_description_tooltip": "A short description of your Error Notification.",
-      "notification_endpoint_tooltip": "The URL address where Syncari will send your Webhook.",
+      "notification_endpoint_tooltip": "The URL address where NextEdge AI will send your Webhook.",
       "notification_name_tooltip": "The name of your {{type}} Error Notification.",
       "notification_schedule_tooltip": "Select the schedule when this Error Notification will be triggered if an Error occurs.",
       "notification_status_tooltip": "Make the {{type}} notification Active to send {{type}} to your preferred destination.",
@@ -3265,7 +3265,7 @@
       "test_webhook": "Test Webhook",
       "test_webhook_error": "Error while testing webhook",
       "verify_email_error": "Error verifying email",
-      "verify_email_success": "Thanks for validating your email with Syncari",
+      "verify_email_success": "Thanks for validating your email with NextEdge AI",
       "webhook": "Webhook",
       "webhook_config_header": "Header/Body"
     },
@@ -3283,14 +3283,14 @@
     },
     "InstanceCopyModal": {
       "cancel_button_label": "Cancel",
-      "destination_instance_label": "Destination Instance (Syncari ID)",
+      "destination_instance_label": "Destination Instance (NextEdge ID)",
       "destination_instance_placeholder": "Enter Destination Instance ID",
-      "instance_input_error": "Syncari ID is invalid.",
+      "instance_input_error": "NextEdge ID is invalid.",
       "recipients_error": "One or more email addresses are invalid.",
       "recipients_help": "Add one or more emails to receive an email notification on completion.",
       "recipients_label": "Notification Recipients",
       "recipients_placeholder": "Enter an Email Address",
-      "source_instance_label": "Source Instance (Syncari ID)",
+      "source_instance_label": "Source Instance (NextEdge ID)",
       "source_instance_placeholder": "Enter Source Instance ID",
       "submit_button_label": "Copy Instance",
       "title": "Copy Instance"
@@ -3322,7 +3322,7 @@
       "fallback_edit_instance_error": "Error editing Instance",
       "fallback_switch_instance_error": "Error switching Instance",
       "manage_trial": "Manage Trial",
-      "max_instances_reached": "You have reached the max limit of instances. Please reach out to Syncari support if you need more instances to be created.",
+      "max_instances_reached": "You have reached the max limit of instances. Please reach out to NextEdge AI support if you need more instances to be created.",
       "only_org_admins": "Only Org Admins can create Instances",
       "page_title": "Instances",
       "successfully_deleted_instance": "Successfully deleted Instance: {{instanceIds}}",
@@ -3357,10 +3357,10 @@
       "zoominfo": "ZoomInfo"
     },
     "Specter": {
-      "from_id": "From Syncari ID",
+      "from_id": "From NextEdge ID",
       "page_title": "Specter",
       "submit_button": "Set Impartner Oauth",
-      "to_id": "To Syncari ID"
+      "to_id": "To NextEdge ID"
     },
     "SsoConfig": {
       "disable_cancel_text": "No, keep SSO on",
@@ -3390,7 +3390,7 @@
       "profile_save_success": "Subscription changes saved successfully",
       "save_changes": "Save Changes",
       "subName": "Subscription Name",
-      "syncariId": "Instance Syncari Id",
+      "syncariId": "Instance NextEdge ID",
       "upload_image": "Upload Image"
     },
     "Subscriptions": {
@@ -3411,7 +3411,7 @@
       "select_one_organization_title": "Unable to delete",
       "successfully_deleted_subscription": "Successfully deleted Subscription",
       "switch_instance": "Switch Instance",
-      "syncari_id": "Syncari ID"
+      "syncari_id": "NextEdge ID"
     },
     "Branding": {
       "page_title": "Branding",
@@ -3518,7 +3518,7 @@
     "expand": "Expand",
     "imported_files": "Imported Files",
     "insights_studio": "Insights Studio",
-    "logo": "Syncari Logo",
+    "logo": "NextEdge AI Logo",
     "logs": "Logs",
     "reference_data": "Reference Data",
     "reports": "Reports",
@@ -3596,8 +3596,8 @@
     "chat_support": "Chat Support",
     "chat_support_error": "Error loading chat support. Please refresh and try again.",
     "help_docs": "Help Center",
-    "syncari_academy": "Syncari Academy",
-    "unable_to_load_chat": "Unable to load Syncari chat."
+    "syncari_academy": "NextEdge AI Academy",
+    "unable_to_load_chat": "Unable to load NextEdge AI chat."
   },
   "SwitchCaseInput": {
     "add_case": "+ Add Case",
@@ -3753,7 +3753,7 @@
     "input": "Input",
     "loading_test_result": "Loading Test Result…",
     "no_changes_found": "This node was not processed. This could be because no changes were found, a filter skipped this node, or the source record was not from this node.",
-    "no_filter_results": "Search with a Syncari or external record id.",
+    "no_filter_results": "Search with a NextEdge AI or external record id.",
     "not_yet_available": "Test is still {{status}}. Result is not yet available.",
     "output": "Output",
     "test_aborted": "Test was aborted.",
@@ -3864,7 +3864,7 @@
       "errors": "Errors",
       "operation": "Operation",
       "sources": "Original Source",
-      "syncari_id": "Syncari ID",
+      "syncari_id": "NextEdge ID",
       "transaction_id": "Transaction ID"
     },
     "losers": "{{count}} loser",
@@ -3888,12 +3888,12 @@
       "merge": "Merge",
       "merge_report_only": "Merge (Report only)",
       "merge_skip": "Merge Skip",
-      "syncari_delete": "Syncari delete",
+      "syncari_delete": "NextEdge AI delete",
       "update": "Update"
     },
     "operations_label": "Operations",
     "recordId": "Record Id",
-    "syncari_record_id": "Syncari Record ID",
+    "syncari_record_id": "NextEdge AI Record ID",
     "title": "Logs",
     "transactions": "Transactions",
     "unable_to_fetch_kpis": "Problem encountered while fetching KPIs",
@@ -3923,8 +3923,8 @@
       "error": "Error",
       "field": "Field",
       "fieldLevelMergePolicy": "Field level merge policy",
-      "newValue": "New Syncari value",
-      "oldValue": "Old Syncari value",
+      "newValue": "New NextEdge AI value",
+      "oldValue": "Old NextEdge AI value",
       "pipeline": "Pipeline",
       "skip_value": "Skip Value",
       "skip_when": "Skip When",
@@ -3933,9 +3933,9 @@
       "value": "Value"
     },
     "losing_record": "Losing record",
-    "record_is_deleted": "{{id}} (deleted from Syncari)",
+    "record_is_deleted": "{{id}} (deleted from NextEdge AI)",
     "selectWinnerPredicate": "Select winner",
-    "syncari_deleted": "Syncari deleted: ",
+    "syncari_deleted": "NextEdge AI deleted: ",
     "winning_record": "Winning record"
   },
   "UnsavedConfirmModal": {
@@ -3952,7 +3952,7 @@
     "password": "Password",
     "reset_title": "Your password has expired. Please set a new password",
     "success_message": "Password set successfully!",
-    "title": "Please set a password to access Syncari",
+    "title": "Please set a password to access NextEdge AI",
     "update": "Update"
   },
   "UrlUtil": {
@@ -4004,7 +4004,7 @@
     "required_message": "{{label}} is required"
   },
   "MCPConsent": {
-    "title": "Syncari MCP Authorization Request",
+    "title": "NextEdge AI MCP Authorization Request",
     "permissions_requested": "The following permissions are being requested for your MCP instance:",
     "authorization_error": "Authorization Error",
     "unknown_error": "Unknown error",
@@ -4015,15 +4015,15 @@
     "permissions": {
       "read": {
         "name": "Read Data",
-        "description": "access to read data from you Syncari datastore"
+        "description": "access to read data from you NextEdge AI datastore"
       },
       "run_actions": {
         "name": "Run Actions",
-        "description": "access to run actions from your Syncari instance"
+        "description": "access to run actions from your NextEdge AI instance"
       },
       "read_schema": {
         "name": "Read Schema",
-        "description": "access to read schema from you Syncari Instance"
+        "description": "access to read schema from you NextEdge AI Instance"
       }
     }
   }

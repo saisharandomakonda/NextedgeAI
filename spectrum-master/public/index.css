@@ -22,6 +22,38 @@
 
 html {
   font-size: 14px;
+  color: #172554;
+  background: #f8fafc;
+  font-family: 'Fira Sans', Arial, sans-serif;
+}
+
+:root {
+  --color-primary: #1e40af;
+  --color-on-primary: #ffffff;
+  --color-secondary: #3b82f6;
+  --color-accent: #d97706;
+  --color-background: #f8fafc;
+  --color-foreground: #172554;
+  --color-muted: #e9eef6;
+  --color-border: #dbeafe;
+  --color-destructive: #dc2626;
+  --color-ring: #1e40af;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 #CalculateTextWidth {

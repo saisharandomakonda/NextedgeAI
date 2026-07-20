@@ -22,7 +22,7 @@ public class Organization extends UUIDAuditModel {
 	private SSOAuthConfig ssoConfig;
 
     private OrganizationType orgType = OrganizationType.standard;
-    // If partner org, the Oauth configurations, if any to use instead of Syncari ones for all instances in the org.
+    // If partner org, the OAuth configurations, if any, to use instead of NextEdge AI defaults.
     private Map<String, OAuthConfig> oauthConfigs = new HashMap<String, OAuthConfig>();
 	private String deletedBy;
 	private Date deletedAt;
@@ -40,29 +40,34 @@ public class Organization extends UUIDAuditModel {
 
 	}
 
-	public Optional<Instance> getInstance(String syncariId) {
-		return instances.stream().filter(i -> syncariId.equals(i.getSyncariId())).findFirst();
+	public Optional<Instance> getInstance(String nextEdgeId) {
+		return instances.stream().filter(i -> nextEdgeId.equals(i.getNextEdgeId())).findFirst();
 	}
 
-	public void removeInstance(String syncariId) {
+	public void removeInstance(String nextEdgeId) {
 	    ListIterator<Instance> iter = instances.listIterator();
 	    while(iter.hasNext()){
-	        if(syncariId.equals(iter.next().getSyncariId())){
+	        if(nextEdgeId.equals(iter.next().getNextEdgeId())){
 	            iter.remove();
 	        }
 	    }
 	}
 
-	public Optional<Instance> getActiveInstance(String syncariId) {
-		return instances.stream().filter(i -> syncariId.equals(i.getSyncariId()) && i.isActive()).findFirst();
+	public Optional<Instance> getActiveInstance(String nextEdgeId) {
+		return instances.stream().filter(i -> nextEdgeId.equals(i.getNextEdgeId()) && i.isActive()).findFirst();
 	}
 
 	public List<Instance> getActiveInstances() {
 		return instances.stream().filter(i -> i.isActive()).collect(Collectors.toList());
 	}
 
+	public Set<String> getAllNextEdgeIds() {
+	    return instances.stream().map(Instance::getNextEdgeId).collect(Collectors.toSet());
+	}
+
+	@Deprecated
 	public Set<String> getAllSyncariIds() {
-	    return instances.stream().map(i -> i.getSyncariId()).collect(Collectors.toSet());
+		return getAllNextEdgeIds();
 	}
 	
 	public Optional<Instance> getInstanceByName(String instanceName) {

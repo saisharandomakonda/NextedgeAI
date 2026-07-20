@@ -154,10 +154,10 @@ export const getRelativeDate = (dateString: string) => {
 };
 
 // For Antd date picker
-export function disablePastDate(currentDate?: Moment) {
+export function disablePastDate(currentDate?: Moment | null) {
   return !!currentDate?.isBefore(moment(), 'day');
 }
-export function disablePastTime(currentDate?: Moment) {
+export function disablePastTime(currentDate?: Moment | null) {
   if (!currentDate) {
     return {
       disabledHours: () => [],

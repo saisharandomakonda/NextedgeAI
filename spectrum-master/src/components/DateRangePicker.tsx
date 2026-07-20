@@ -26,8 +26,8 @@ export interface DateRangePickerProps extends Omit<DatePickerProps, 'onChange' |
   showTime?: boolean;
 }
 
-const notBefore = (baseDate?: Moment) => (date?: Moment) => (baseDate && date ? date.isBefore(baseDate) : false);
-const notAfter = (baseDate?: Moment) => (date?: Moment) => (baseDate && date ? date.isAfter(baseDate) : false);
+const notBefore = (baseDate?: Moment) => (date: Moment | null) => (baseDate && date ? date.isBefore(baseDate) : false);
+const notAfter = (baseDate?: Moment) => (date: Moment | null) => (baseDate && date ? date.isAfter(baseDate) : false);
 
 const DateRangePicker = ({
   dateFormat = SHORT_DATE_DISPLAY_FORMAT,

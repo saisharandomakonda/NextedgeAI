@@ -50,7 +50,7 @@ export default function SharedDashboard({
   const emailDecoded = atob(emailFromUrl);
   const dispatch = useEnhancedDispatch();
   const loggedinUserEmail = useSelector(selectUserEmail);
-  const currentInstanceSyncariId = useSelector(selectCurrentInstanceId);
+  const currentInstanceNextEdgeId = useSelector(selectCurrentInstanceId);
   const navigateHome = () => navigateTo(RouteConstants.HOME);
   const utcToLocal = useUtcTimeInUsersTimezone();
   const ResponsiveGridLayout = useMemo(() => WidthProvider(Responsive), []);
@@ -118,7 +118,7 @@ export default function SharedDashboard({
       );
     } else {
       const nextDashboardId =
-        availableDashboards?.find((dashboard) => dashboard.dashboardInstanceId === currentInstanceSyncariId)
+        availableDashboards?.find((dashboard) => dashboard.dashboardInstanceId === currentInstanceNextEdgeId)
           ?.dashboardId || availableDashboards[0]?.dashboardId;
       return (
         <DashboardExpiredModal

@@ -255,7 +255,7 @@ public class EntityNodeController {
                 new KeyValue("graphKey","configuration.exhaustAllRecords").set("configKey", "value")
         );
 
-        String connectorName = connector.getName().equalsIgnoreCase("syncari") ? "Syncari" : connector.getName();
+        String connectorName = connector.getName().equalsIgnoreCase("syncari") ? "NextEdge AI" : connector.getName();
 
         var entityConfig = new KeyValue()
                 .set("datatype", "picklist")

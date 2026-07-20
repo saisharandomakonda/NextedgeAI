@@ -21,6 +21,16 @@ aws cloudformation deploy --profile codex-cli --region ap-south-1 --stack-name n
 
 The budget warning SNS topic deliberately has no email subscriber because no notification address is stored in the repository. Add a confirmed private email subscription out-of-band.
 
+## Deploy a validated application release
+
+The runtime uses the instance IAM role and AWS Secrets Manager; it does not store cloud or model API keys in Git. On the managed EC2 host, run:
+
+```bash
+AWS_REGION=ap-south-1 ./infrastructure/aws/scripts/deploy-demo.sh /opt/nextedge-ai/current
+```
+
+The script writes a mode-`0600` environment file, keeps MongoDB and Redis on the private Docker network, starts prebuilt images, verifies both health endpoints, and performs a password-login smoke test without printing credentials.
+
 ## Emergency re-enable procedure
 
 Only after reviewing Bedrock spend, remove the `NextEdgeAIBedrockEmergencyDeny` inline policy from `nextedge-ai-ec2-role` and set `/nextedge-ai/llm/enabled` back to `true`.

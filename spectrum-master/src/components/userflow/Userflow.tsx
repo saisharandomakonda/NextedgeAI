@@ -51,11 +51,11 @@ export const Userflow = () => {
         in_trial:
           currentUser.currentInstanceType === 'trial' ||
           localStorage.getItem(AppConstants.SIMULATE_TRIAL_INSTANCE) === 'true',
-        instance_id: currentUser.currentInstanceSyncariId,
+        instance_id: currentUser.currentInstanceNextEdgeId,
         instance_type: currentUser.currentInstanceType,
       });
     }
-  }, [currentUser.currentInstanceSyncariId, currentUser.currentInstanceType, isInitialized]);
+  }, [currentUser.currentInstanceNextEdgeId, currentUser.currentInstanceType, isInitialized]);
 
   /**
    * Update user with additional data from Instance State, when available
@@ -101,10 +101,10 @@ export const Userflow = () => {
   useEffect(() => {
     if (isInitialized && userLoginStatus === AppConstants.FETCH_STATUS.SUCCESS) {
       userflow.track('login', {
-        login_instance_id: currentUser.currentInstanceSyncariId,
+        login_instance_id: currentUser.currentInstanceNextEdgeId,
       });
     }
-  }, [currentUser.currentInstanceSyncariId, isInitialized, userLoginStatus]);
+  }, [currentUser.currentInstanceNextEdgeId, isInitialized, userLoginStatus]);
 
   // Always return null, no UI elements
   return null;

@@ -1,8 +1,10 @@
 package com.syncari.connector.service;
 
 import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.*;
@@ -49,14 +51,26 @@ public class S3Service extends BaseFileService implements CommonDataService, Met
 
     private AmazonS3 getClient(ConnectorInfo info) {
         String clientRegion = info.getMetaConfig().get("region").toString();
-        BasicAWSCredentials awsCreds = new BasicAWSCredentials(info.getAuthConfig().getAccessToken(), info.getAuthConfig().getClientSecret());
         ClientConfiguration clientConfiguration = new ClientConfiguration();
         clientConfiguration.setConnectionTimeout(30000);
         clientConfiguration.setSocketTimeout(60000);
         clientConfiguration.setMaxConnections(100);
         clientConfiguration.setMaxErrorRetry(5);
         return AmazonS3ClientBuilder.standard().withRegion(clientRegion)
-                .withCredentials(new AWSStaticCredentialsProvider(awsCreds)).withClientConfiguration(clientConfiguration).build();
+                .withCredentials(credentialsProvider(info)).withClientConfiguration(clientConfiguration).build();
+    }
+
+    private AWSCredentialsProvider credentialsProvider(ConnectorInfo info) {
+        String accessKey = info.getAuthConfig() == null ? null : info.getAuthConfig().getAccessToken();
+        String secretKey = info.getAuthConfig() == null ? null : info.getAuthConfig().getClientSecret();
+        if (StringUtils.isBlank(accessKey) && StringUtils.isBlank(secretKey)) {
+            log.info("Amazon S3 connector is using the AWS workload IAM role");
+            return DefaultAWSCredentialsProviderChain.getInstance();
+        }
+        if (StringUtils.isBlank(accessKey) || StringUtils.isBlank(secretKey)) {
+            throw new IllegalArgumentException("Supply both an AWS access key and secret key, or leave both blank to use the workload IAM role");
+        }
+        return new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey));
     }
 
     @Override
@@ -215,11 +229,10 @@ public class S3Service extends BaseFileService implements CommonDataService, Met
             if(!config.getMetaConfig().containsKey("bucketName") || StringUtils.isBlank(config.getMetaConfig().get("bucketName").toString())) {
                 throw new RuntimeException("Bucket Name is required");
             }
-            if(StringUtils.isBlank(config.getAuthConfig().getAccessToken())) {
-                throw new RuntimeException("Access Key is required");
-            }
-            if(StringUtils.isBlank(config.getAuthConfig().getClientSecret())) {
-                throw new RuntimeException("Secret Key is required");
+            boolean accessKeySupplied = StringUtils.isNotBlank(config.getAuthConfig().getAccessToken());
+            boolean secretKeySupplied = StringUtils.isNotBlank(config.getAuthConfig().getClientSecret());
+            if (accessKeySupplied != secretKeySupplied) {
+                throw new RuntimeException("Supply both an AWS access key and secret key, or leave both blank to use the workload IAM role");
             }
             if(!config.getMetaConfig().containsKey("region") || StringUtils.isBlank(config.getMetaConfig().get("region").toString())) {
                 throw new RuntimeException("Client Region is required");

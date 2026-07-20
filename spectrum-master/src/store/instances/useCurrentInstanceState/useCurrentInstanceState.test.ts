@@ -34,7 +34,7 @@ describe('useCurrentInstanceState', () => {
     mockedAxios.get.mockImplementationOnce(() => Promise.resolve({ data: mockTrialInstanceState }));
 
     renderHook(() => useCurrentInstanceState(), {
-      testState: { user: { currentInstanceType: 'trial', currentInstanceSyncariId: '1' } },
+      testState: { user: { currentInstanceType: 'trial', currentInstanceNextEdgeId: '1' } },
     });
 
     expect(mockedAxios.get).toHaveBeenCalledWith('/arcade/api/v1/organization/instanceState/1');
@@ -42,7 +42,7 @@ describe('useCurrentInstanceState', () => {
   it('returns an enhanced Instance State from Redux store', () => {
     const result = renderHook(() => useCurrentInstanceState(), {
       testState: {
-        user: { currentInstanceType: 'trial', currentInstanceSyncariId: '1' },
+        user: { currentInstanceType: 'trial', currentInstanceNextEdgeId: '1' },
         instance: { currentInstanceState: mockTrialInstanceState },
       },
     });
@@ -60,7 +60,7 @@ describe('useCurrentInstanceState', () => {
     mockedAxios.get.mockImplementationOnce(() => Promise.resolve({ data: mockTrialInstanceState }));
 
     const { refresh } = renderHook(() => useCurrentInstanceState(), {
-      testState: { user: { currentInstanceType: 'trial', currentInstanceSyncariId: '1' } },
+      testState: { user: { currentInstanceType: 'trial', currentInstanceNextEdgeId: '1' } },
     });
 
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);

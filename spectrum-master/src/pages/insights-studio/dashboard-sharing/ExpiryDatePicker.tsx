@@ -25,7 +25,7 @@ export const ExpiryDatePicker = forwardRef<ExpiryDatePickerRef, ExpiryDatePicker
 
     const [updateExpiry] = useUpdateExpiryMutation();
 
-    function handleOk(date: Moment) {
+    function handleOk(date: Moment | null) {
       if (date) {
         updateExpiry({
           sharedItemId: data?.sharedItemId,

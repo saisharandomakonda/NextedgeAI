@@ -11,6 +11,7 @@ import SearchBox from 'components/SearchBox';
 import { useUtcTimeInUsersTimezone } from 'hooks/moment';
 import { useGetAllCustomSynapseListQuery } from 'store/custom-synapse/sdk/api';
 import { CustomSynapseDraftStatuses } from 'store/custom-synapse/types';
+import { nextEdgeHelpUrl } from 'utils/Branding';
 import { getRtkQueryErrorMessage } from 'utils/getRtkQueryErrorMessage';
 import { tNamespaced, tc } from 'utils/i18nUtil';
 import RouteConstants from 'utils/RouteConstants';
@@ -30,7 +31,7 @@ import './CustomSynapses.scss';
 
 const tn = tNamespaced('CustomSynapse');
 
-const gettingStartedHelp = 'https://support.syncari.com/hc/en-us/articles/28274657432980-Custom-Synapse-Overview';
+const gettingStartedHelp = nextEdgeHelpUrl('custom-synapse-overview');
 
 export function CustomSynapses({ uri }: RouteComponentProps) {
   const { data: customSynapses, isFetching, error } = useGetAllCustomSynapseListQuery();

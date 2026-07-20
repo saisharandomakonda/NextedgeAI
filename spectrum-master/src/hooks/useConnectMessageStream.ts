@@ -10,16 +10,16 @@ import { connectMessageStream } from 'store/app/actions';
 const useConnectMessageStream = () => {
   const dispatch = useEnhancedDispatch();
 
-  const currentInstanceSyncariId = useEnhancedSelector((state) => state.user.currentInstanceSyncariId);
-  const previousCurrentInstanceSyncariId = usePreviousValue(currentInstanceSyncariId);
+  const currentInstanceNextEdgeId = useEnhancedSelector((state) => state.user.currentInstanceNextEdgeId);
+  const previousCurrentInstanceNextEdgeId = usePreviousValue(currentInstanceNextEdgeId);
 
   const userEmail = useEnhancedSelector((state) => state.user.email);
 
   useEffect(() => {
-    if (currentInstanceSyncariId && currentInstanceSyncariId !== previousCurrentInstanceSyncariId) {
-      dispatch(connectMessageStream(currentInstanceSyncariId, userEmail));
+    if (currentInstanceNextEdgeId && currentInstanceNextEdgeId !== previousCurrentInstanceNextEdgeId) {
+      dispatch(connectMessageStream(currentInstanceNextEdgeId, userEmail));
     }
-  }, [currentInstanceSyncariId, dispatch, previousCurrentInstanceSyncariId, userEmail]);
+  }, [currentInstanceNextEdgeId, dispatch, previousCurrentInstanceNextEdgeId, userEmail]);
 };
 
 export default useConnectMessageStream;

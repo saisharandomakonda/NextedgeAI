@@ -142,7 +142,7 @@ public class PostgresService extends DatabaseService implements SynapseInfoServi
     @Override
     public List<AuthField> getConfigureFields() {
         AuthField bootstrappable = new AuthField().setDataType("checkbox").setName("bootstrapable")
-                .setLabel("Instantiate with Syncari entities");
+                .setLabel("Instantiate with NextEdge entities");
         AuthField caseConfiguration = new AuthField().setDataType("checkbox").setName("caseConfiguration")
                 .setLabel("Use lower case when creating tables and columns");
         AuthField cluster = new AuthField().setRequired(true).setDataType("text").setName(Constants.CLUSTER_NAME)

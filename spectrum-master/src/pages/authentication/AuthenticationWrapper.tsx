@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2019-Present Syncari - All rights reserved.
+// NextEdge AI private application.
 //
 import cx from 'classnames';
 import { ReactNode } from 'react';
@@ -22,7 +22,7 @@ function AuthenticationWrapper({ className, children, footer }: AuthenticationPr
   return (
     <CenterLayout className={cls}>
       <div className="logo-container">
-        <img className="logo" src={Logo} alt="Logo" />
+        <img className="logo" src={Logo} alt="NextEdge AI" />
       </div>
       <div className="authentication-content">{children}</div>
       {footer}

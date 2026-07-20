@@ -4,8 +4,8 @@ export const integerRegEx = /^\d*$/;
 
 export const apiNameRegEx = /[^a-zA-Z0-9\d_-]/;
 
-// Matches any @syncari.com email address
-export const syncariEmailRegEx = /\S*@syncari\.com/;
+// Legacy employee-only behavior is disabled in the white-label build.
+export const syncariEmailRegEx = /$a/;
 
 // Alpha numberic plus dashes, underscores, and periods
 export const validFileNameRegEx = /[^0-9a-zA-Z-_\.\s]+/gi;

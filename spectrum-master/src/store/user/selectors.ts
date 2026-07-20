@@ -21,7 +21,7 @@ export const selectUserEmail = (state: RootState) => state.user.email;
 export const selectUserTimezone = (state: RootState) => state.user.timeZone;
 
 export const selectCurrentInstanceName = (state: RootState) => state.user.currentInstanceName;
-export const selectCurrentInstanceId = (state: RootState) => state.user.currentInstanceSyncariId;
+export const selectCurrentInstanceId = (state: RootState) => state.user.currentInstanceNextEdgeId;
 export const selectCurrentInstanceType = (state: RootState) => state.user.currentInstanceType;
 
 export const selectUserRoles = (state: RootState) => state.user.userRoles;

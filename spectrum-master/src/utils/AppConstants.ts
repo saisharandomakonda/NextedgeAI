@@ -6,7 +6,7 @@ const AppConstants = {
   BEARER_TOKEN: 'BEARER_TOKEN',
   // TODO: Move this to the data url
   API_URL: '$ARCADE_TARGET/swagger-ui.html',
-  THOUGHTSPOT_URL: 'https://syncari.thoughtspot.cloud',
+  THOUGHTSPOT_URL: process.env.REACT_APP_THOUGHTSPOT_URL || '',
 
   SUBSCRIPTION_STATUS: {
     ACTIVE: 'ACTIVE',

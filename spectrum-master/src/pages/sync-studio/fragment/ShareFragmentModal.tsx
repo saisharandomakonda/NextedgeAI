@@ -28,7 +28,7 @@ const mapStateToProps = (state: RootState) => ({
   instances: state.user.instances,
   fragmentId: state.fragment.shareFragmentId,
   fragmentShares: state.fragment.fragmentShares,
-  currentInstanceId: state.user.currentInstanceSyncariId,
+  currentInstanceId: state.user.currentInstanceNextEdgeId,
   context: state.fragment.fragmentContext,
   fragmentSharing: state.fragment.fragmentSharing,
   fragmentSharingErrorMessage: state.fragment.fragmentSharingErrorMessage,

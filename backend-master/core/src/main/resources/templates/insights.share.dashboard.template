@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title> Syncari {{ fromUser }} shared something with you</title>
+    <title> NextEdge AI {{ fromUser }} shared something with you</title>
     <style>
 ​
     /* -------------------------------------
@@ -111,7 +111,7 @@
                     <tr>
                       <td style="font-family: sans-serif; font-size: 16px; vertical-align: top; text-align: left;">
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">Hi {{userEmail}},</p>
-                        <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ fromUser }} has invited you to see their dashboard"<b>{{dashboardName}}</b>" on Syncari</p>
+                        <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ fromUser }} has invited you to see their dashboard"<b>{{dashboardName}}</b>" on NextEdge AI</p>
                         {% if (messageExists) %}
                             <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;"><hr style="border: 1px solid #D9D9D9;"/></p>
                             <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">{{message}}</p>
@@ -148,12 +148,12 @@
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    Sent by <a href="https://www.syncari.com" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Syncari</a>
+                    Sent by <a href="/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">NextEdge AI</a>
                   </td>
                 </tr>
                 <tr>
                   <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    <a href="https://app.syncari.com/profile/notification" style="color: #999999; font-size: 12px; text-align: center;">Preferences</a> &bull; <a href="https://support.syncari.com" style="color: #999999; font-size: 12px; text-align: center;">Support</a>
+                    <a href="/" style="color: #999999; font-size: 12px; text-align: center;">Preferences</a> &bull; <a href="/" style="color: #999999; font-size: 12px; text-align: center;">Support</a>
                   </td>
                 </tr>
               </table>

@@ -249,7 +249,7 @@ const EditValuesDrawer = ({ visible, onClose, selectedValues = [] }: EditValuesD
           input={
             <Select
               value={formData.resource}
-              mode={resourceMultiSelect ? 'multiple' : 'single'}
+              mode={resourceMultiSelect ? 'multiple' : undefined}
               onChange={(value) => {
                 const val = !resourceMultiSelect ? [value] : value;
                 handleInputChange('resource', val);

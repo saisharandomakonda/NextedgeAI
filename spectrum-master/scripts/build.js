@@ -191,14 +191,26 @@ function buildVersion() {
   const packageJson = JSON.parse(fs.readFileSync(paths.appPackageJson, 'utf8'));
   const versionFile = `${paths.appPublic}/version.json`;
 
+  const readGitValue = (command, environmentName, fallback) => {
+    if (process.env[environmentName]) {
+      return process.env[environmentName].trim();
+    }
+
+    try {
+      return String(execSync(command, { stdio: ['ignore', 'pipe', 'ignore'] })).trim();
+    } catch (error) {
+      return fallback;
+    }
+  };
+
   // Show sha1 for our build
-  versionObj.gitSha1 = String(execSync('git rev-parse --short HEAD')).trim();
+  versionObj.gitSha1 = readGitValue('git rev-parse --short HEAD', 'NEXTEDGE_BUILD_SHA', 'source-archive');
   // Build date
   versionObj.buildDate = String(execSync('date +%FT%T%z')).trim();
   // Use the version from the package version
   versionObj.version = packageJson.version.trim();
   // Branch name of this build
-  versionObj.branchName = String(execSync('git rev-parse --abbrev-ref HEAD')).trim();
+  versionObj.branchName = readGitValue('git rev-parse --abbrev-ref HEAD', 'NEXTEDGE_BUILD_BRANCH', 'main');
 
   fs.writeFileSync(versionFile, JSON.stringify(versionObj));
 }

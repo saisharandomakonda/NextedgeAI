@@ -7,7 +7,7 @@ import { render } from 'tests/helpers';
 const testState = {
   testState: {
     user: {
-      currentInstanceSyncariId: 'instance_one',
+      currentInstanceNextEdgeId: 'instance_one',
       instances: [
         {
           name: 'Instance One',

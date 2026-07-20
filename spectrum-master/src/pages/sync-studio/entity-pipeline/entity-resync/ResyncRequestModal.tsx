@@ -187,13 +187,13 @@ const ResyncRequestModal = () => {
   // toDate is disabled if,
   // date is after now
   // fromDate is set and fromDate is AFTER date
-  const toDateDatePredicate = (date?: Moment): boolean =>
+  const toDateDatePredicate = (date?: Moment | null): boolean =>
     !!(date?.isAfter(moment()) || (dates?.fromDate && dates.fromDate.isAfter(date)));
 
   // fromDate is disabled if,
   // date is after now
   // toDate is set and toDate is BEFORE date
-  const fromDateDatePredicate = (date?: Moment): boolean =>
+  const fromDateDatePredicate = (date?: Moment | null): boolean =>
     !!(date?.isAfter(moment()) || (dates?.toDate && dates.toDate.isBefore(date)));
 
   // simple validation to ensure we have sources and the correct dates selected

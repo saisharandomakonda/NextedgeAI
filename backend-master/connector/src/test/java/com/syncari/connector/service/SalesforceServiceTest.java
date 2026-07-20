@@ -1,4 +1,4 @@
-﻿package com.syncari.connector.service;
+package com.syncari.connector.service;
 
 import java.io.FileInputStream;
 import java.io.IOException;

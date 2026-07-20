@@ -4,7 +4,7 @@ import './MarketingFallbackContent.scss';
 
 const tn = tNamespaced('MarketingFallbackContent');
 
-const introUrl = 'https://support.syncari.com/hc/en-us/articles/360052615051-Introduction-to-Syncari';
+const introUrl = '/help';
 
 export const MarketingFallbackContent = () => {
   return (

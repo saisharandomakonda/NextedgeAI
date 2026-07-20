@@ -24,8 +24,8 @@ import static com.syncari.core.utils.ValidationUtils.validateCondition;
 @Accessors(chain = true)
 public class User extends UUIDAuditModel {
 
-    public static final String SYSTEM_USER_PREFIX = "systemuser@syncari.com";
-    public static final String DEFAULT_SUPER_ADMIN_EMAIL = "admin@syncari.com";
+    public static final String SYSTEM_USER_PREFIX = "systemuser@nextedge.ai";
+    public static final String DEFAULT_SUPER_ADMIN_EMAIL = System.getenv().getOrDefault("NEXTEDGE_ADMIN_EMAIL", "admin@nextedge.ai");
     private static final long PASSWORD_VALIDITY_DURATION = Duration.ofDays(90).getSeconds() * 1000;
     @Email
     @NotNull(message = "User email is required")
@@ -59,7 +59,7 @@ public class User extends UUIDAuditModel {
     private String insightsProviderUserId;
     private String insightsProviderUserName;
     //the list of oauth details for the services that
-    // require the user to authenticate against Syncari (we act as the OAuth server/IDP),
+    // require the user to authenticate against NextEdge AI (we act as the OAuth server/IDP),
 
     private List<UserOAuthDetails> oauthServices = new ArrayList<>();
 
@@ -87,7 +87,7 @@ public class User extends UUIDAuditModel {
     }
 
     public void addAvailableInstance(Instance instance) {
-        availableInstances.add(instance.getSyncariId());
+        availableInstances.add(instance.getNextEdgeId());
     }
 
     public void addAvailableInstance(String instanceId) {
@@ -98,8 +98,8 @@ public class User extends UUIDAuditModel {
         availableInstances.remove(instanceId);
     }
     
-    public boolean hasAccess(String syncariId) {
-        return availableInstances.contains(syncariId);
+    public boolean hasAccess(String nextEdgeId) {
+        return availableInstances.contains(nextEdgeId);
     }
 
     @Override
@@ -176,7 +176,7 @@ public class User extends UUIDAuditModel {
     }
 
     public boolean isExcludedFromPasswordValidation(){
-        // exclude password validation for system user, api user and syncari admin user
+        // exclude password validation for system user, API user and the NextEdge AI bootstrap admin
         return isSystemUser() || isApiUser() || getEmail().equalsIgnoreCase(DEFAULT_SUPER_ADMIN_EMAIL);
     }
     

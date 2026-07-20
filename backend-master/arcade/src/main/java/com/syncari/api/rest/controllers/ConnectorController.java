@@ -166,7 +166,7 @@ public class ConnectorController {
         Connector syncariConnector = connectorService.getSyncariConnector();
         Connector conn = syncariConnector.makeCopy();
         conn.setId(syncariConnector.getId());
-        conn.setName("Syncari");
+        conn.setName("NextEdge AI");
         connectors.add(conn);
         for (Connector connector : connectors) {
             response.add(transformer.toConnectorResponse(connector, connectorService.getSetting(connector.getId())));

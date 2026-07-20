@@ -176,7 +176,7 @@ public class UserControllerTest extends AbstractSyncariTest{
 
 			assertEquals("newInstance", SyncariContext.getInstance().getName());
 			assertEquals("New Inst", response.getCurrentInstanceName());
-			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceSyncariId());
+			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceNextEdgeId());
 			assertEquals(newInstance.getSyncariId(), userService.getUser(user.getEmail()).getCurrentInstanceId());
 			provisioningService.deprovisionInstance(newInstance.getSyncariId(), true);
 			User updatedUser = userService.getUser(user.getEmail());
@@ -218,7 +218,7 @@ public class UserControllerTest extends AbstractSyncariTest{
 
 			assertEquals("instanceSwitchWithRole", SyncariContext.getInstance().getName());
 			assertEquals("New Inst", response.getCurrentInstanceName());
-			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceSyncariId());
+			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceNextEdgeId());
 
 			var authToken = resp.getHeader(SecurityConstants.TOKEN_HEADER);
 			List<String> permissions = extractPermissionsFromToken(authToken);
@@ -251,7 +251,7 @@ public class UserControllerTest extends AbstractSyncariTest{
 	        
 	        assertEquals("newInstanceNoDisplay", SyncariContext.getInstance().getName());
 	        assertEquals("newInstanceNoDisplay", response.getCurrentInstanceName());
-	        assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceSyncariId());
+	        assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceNextEdgeId());
 	        provisioningService.deprovisionInstance(newInstance.getSyncariId(), true);
 	        org = SyncariContext.getOrganziation();
 	        List<Instance> activeInstances = org.getActiveInstances();
@@ -284,7 +284,7 @@ public class UserControllerTest extends AbstractSyncariTest{
 
 			assertEquals("newInstance", SyncariContext.getInstance().getName());
 			assertEquals("newInstance", response.getCurrentInstanceName());
-			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceSyncariId());
+			assertEquals(newInstance.getSyncariId(), response.getCurrentInstanceNextEdgeId());
 			assertEquals("New Org", SyncariContext.getOrganziation().getName());
 			assertEquals(newInstance.getSyncariId(), userService.getUser(user.getEmail()).getCurrentInstanceId());
 			provisioningService.deprovisionInstance(newInstance.getSyncariId(), true);

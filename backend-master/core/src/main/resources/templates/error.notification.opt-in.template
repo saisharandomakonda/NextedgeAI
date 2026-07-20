@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Syncari Notification opt-in</title>
+    <title>NextEdge AI Notification opt-in</title>
     <style>
 
     /* -------------------------------------
@@ -129,7 +129,7 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                	{{fromUser}} added you to the distribution list for {{configName}}, which emails error notifications {{cadence}} from your Syncari instance.
+                                                {{fromUser}} added you to the distribution list for {{configName}}, which emails error notifications {{cadence}} from your NextEdge AI instance.
                                                 </p>
 												<p
                                                     style="
@@ -174,7 +174,7 @@
                                                         margin-bottom: 15px;
                                                     "
                                                 >
-                                                    Syncari Team
+                                                    NextEdge AI Team
                                                 </p>
                                                 <p>&nbsp;</p>
                                                 <p
@@ -213,12 +213,12 @@
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    Sent by <a href="https://www.syncari.com" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Syncari</a>
+                    Sent by <a href="/" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">NextEdge AI</a>
                   </td>
                 </tr>
                 <tr>
                   <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; text-align: center;">
-                    <a href="https://app.syncari.com/settings/notifications/email" style="color: #999999; font-size: 12px; text-align: center;">Preferences</a> &bull; <a href="https://support.syncari.com" style="color: #999999; font-size: 12px; text-align: center;">Support</a>
+                    <a href="/" style="color: #999999; font-size: 12px; text-align: center;">Preferences</a> &bull; <a href="/" style="color: #999999; font-size: 12px; text-align: center;">Support</a>
                   </td>
                 </tr>
               </table>

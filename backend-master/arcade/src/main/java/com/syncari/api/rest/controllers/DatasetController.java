@@ -149,7 +149,7 @@ public class DatasetController {
         if (QField.Type.ENTITY.name().equals(datasourceType)){
             EntityDefinition entityDefinition =  schemaService.getEntity(datasourceId);
             List<AttributeDefinition> atts = entityDefinition.getAttributes();
-            AttributeDefinition syncariid = new AttributeDefinition().setDisplayName("Syncari Id").setDataType(StringType.VALUE).setApiName("syncariid").setEntityId(entityDefinition.getId()).setDataStoreName("syncariid");
+            AttributeDefinition syncariid = new AttributeDefinition().setDisplayName("NextEdge ID").setDataType(StringType.VALUE).setApiName("syncariid").setEntityId(entityDefinition.getId()).setDataStoreName("syncariid");
             syncariid.setId(ObjectId.get().toHexString());
             atts.add(syncariid);
             return transformer.transformToDatasourceDTOForEntityDef(entityDefinition,datasourceAlias);

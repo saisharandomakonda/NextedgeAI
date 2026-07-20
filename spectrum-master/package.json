@@ -25,7 +25,7 @@
     "ag-grid-community": "^25.0.1",
     "ag-grid-react": "^25.0.1",
     "antd": "^3.21.4",
-    "axios": "0.30.2",
+    "axios": "^1.18.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-plugin-named-asset-import": "^0.3.8",
@@ -41,7 +41,7 @@
     "cronstrue": "^1.101.0",
     "css-loader": "^5.2.7",
     "deepmerge": "^4.2.2",
-    "diff": "^5.1.0",
+    "diff": "^5.2.2",
     "dompurify": "^3.3.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
@@ -55,10 +55,10 @@
     "i18next": "^17.0.6",
     "i18next-intervalplural-postprocessor": "^1.0.2",
     "identity-obj-proxy": "3.0.0",
-    "immer": "^8.0.0",
+    "immer": "^9.0.21",
     "install": "^0.13.0",
     "is-wsl": "^2.2.0",
-    "js-cookie": "^2.2.0",
+    "js-cookie": "^3.0.8",
     "json-bigint": "^1.0.0",
     "less": "^4.1.3",
     "lodash": "^4.17.11",
@@ -68,7 +68,6 @@
     "mini-css-extract-plugin": "^1.6.2",
     "moment": "^2.30.1",
     "moment-timezone": "^0.5.47",
-    "npm": "^8.17.0",
     "object-hash": "^2.2.0",
     "papaparse": "^5.3.2",
     "patch-package": "^6.2.1",
@@ -210,9 +209,9 @@
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
     "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.(js|jsx|cjs|mjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      "^(?!.*\\.(js|jsx|cjs|mjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
@@ -242,8 +241,10 @@
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
-      "web.js",
-      "js",
+    "web.js",
+    "js",
+    "cjs",
+    "mjs",
       "web.ts",
       "ts",
       "web.tsx",
@@ -425,7 +426,6 @@
     "sha.js": "2.4.12",
     "websocket-extensions": "0.1.4",
     "ua-parser-js": "0.7.40",
-    "@babel/helpers": "7.26.10",
     "@xmldom/xmldom": "0.7.7",
     "http-cache-semantics": "4.1.1"
   }
