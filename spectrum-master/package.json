@@ -407,7 +407,7 @@
     "source-map-loader": "^0.2.4",
     "storybook": "^9.1.15",
     "svg-inline-loader": "0.8.2",
-    "terser-webpack-plugin": "^4.2.3",
+    "terser-webpack-plugin": "^5.6.1",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",
     "webpack-dev-server": "^5.2.2",
