@@ -410,7 +410,7 @@
     "terser-webpack-plugin": "^4.2.3",
     "typescript": "^5.7.3",
     "webpack": "^5.97.1",
-    "webpack-dev-server": "^5.2.2",
+    "webpack-dev-server": "^5.2.6",
     "webpack-manifest-plugin": "^5.0.0"
   },
   "engines": {
