@@ -4,7 +4,8 @@
 
 // prettier-ignore
 const RouteConstants = {
-  HOME                          : '/',
+  LANDING                       : '/',
+  HOME                          : '/synapses',
   LOGIN                         : '/login',
   FORGOT_PASSWORD               : '/authentication/forgotpassword',
   FORGOT_PASSWORD_SENT          : '/authentication/forgotpasswordsent',
