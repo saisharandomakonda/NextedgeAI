@@ -82,7 +82,8 @@
 }
 
 .landing-nav {
-  width: min(100% - 48px, 1240px);
+  width: calc(100% - 48px);
+  max-width: 1240px;
   min-height: 76px;
   margin: 0 auto;
   display: grid;
@@ -228,7 +229,8 @@
 }
 
 .landing-hero {
-  width: min(100% - 48px, 1240px);
+  width: calc(100% - 48px);
+  max-width: 1240px;
   min-height: calc(100vh - 76px);
   margin: 0 auto;
   padding: clamp(64px, 8vw, 116px) 0 72px;
@@ -575,7 +577,8 @@
 }
 
 .landing-section {
-  width: min(100% - 48px, 1240px);
+  width: calc(100% - 48px);
+  max-width: 1240px;
   margin: 0 auto;
   padding: clamp(92px, 10vw, 148px) 0;
 
@@ -717,7 +720,8 @@
 }
 
 .landing-cta {
-  width: min(100% - 48px, 1240px);
+  width: calc(100% - 48px);
+  max-width: 1240px;
   margin: 0 auto 48px;
   padding: clamp(76px, 9vw, 128px) clamp(28px, 7vw, 96px);
   position: relative;
@@ -770,7 +774,8 @@
 }
 
 .landing-footer {
-  width: min(100% - 48px, 1240px);
+  width: calc(100% - 48px);
+  max-width: 1240px;
   min-height: 112px;
   margin: 0 auto;
   border-top: 1px solid var(--landing-line);
@@ -837,7 +842,8 @@
   .landing-section,
   .landing-cta,
   .landing-footer {
-    width: min(100% - 32px, 1240px);
+    width: calc(100% - 32px);
+    max-width: 1240px;
   }
 
   .landing-nav {
