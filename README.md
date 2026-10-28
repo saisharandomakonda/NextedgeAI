@@ -1,48 +1,76 @@
 # NextEdge AI
 
-NextEdge AI is a private, multi-tenant data automation platform. It combines a Java/Spring backend, a React/TypeScript operator console, a Node.js reverse proxy, MongoDB, Redis, and compatibility services for workloads that are still being migrated from their original cloud APIs.
+**A multi-tenant data automation platform: connect your data sources, sync them, and work with them through an AI-assisted operator console.**
 
-This repository is private. Do not publish source, screenshots, credentials, architecture details, customer data, or deployment output.
+🔗 **Live demo:** https://d1btvl7l2kals2.cloudfront.net/
 
-## Current phase-one scope
+Email : demo@nextedge.ai
+Password : 5xt90ds7THic2tX4gUBQY8a7
 
-- Product name: **NextEdge AI**
-- Tenant identifier: **NextEdge ID** (`nextEdgeId`)
-- Authentication: password-based JWT sessions
-- AI provider: Amazon Bedrock through the EC2 IAM role
-- Approved connectors: File/CSV, Amazon S3, PostgreSQL, MySQL, and MongoDB
-- Deployment region: AWS `ap-south-1`
-- Demo compute: one isolated Ubuntu `m6i.2xlarge` EC2 instance managed through SSM
+Creds for demo usage.
 
-The live demo is a single-node environment, not a highly available production topology.
+---
+
+## What it does
+
+- **Connects to your data** through File/CSV, Amazon S3, PostgreSQL, MySQL and MongoDB connectors.
+- **Keeps every tenant isolated.** Each organization (identified by a NextEdge ID) gets its own database, and automated tests confirm that one tenant can never read another tenant's data.
+- **Runs sync jobs in the background** with dedicated worker services.
+- **Uses AI** through Amazon Bedrock, behind a provider abstraction so the model can be swapped later.
+- **Deploys to AWS automatically** from GitHub Actions, with no long-lived cloud keys stored anywhere.
+
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React, TypeScript |
+| Backend | Java 11, Spring, Maven |
+| Proxy / static hosting | Node.js |
+| Data | MongoDB, Redis |
+| AI | Amazon Bedrock |
+| Infrastructure | AWS (EC2, CloudFormation, Secrets Manager, SSM), Docker Compose, CloudFront |
+| CI/CD | GitHub Actions with OIDC |
+
+## Architecture
+
+```
+Browser ──► CloudFront ──► Node.js proxy (port 80, only public entry point)
+                                │
+                 ┌──────────────┴──────────────┐
+                 ▼                             ▼
+          REST API (arcade)             Additional API (karibu)
+                 │
+                 ▼
+       Core services: tenant routing, security, AI provider
+                 │
+     ┌───────────┼─────────────┐
+     ▼           ▼             ▼
+  MongoDB      Redis      Sync workers (viper) ──► Connectors
+ (1 DB per tenant)
+```
+
+- Everything except the web proxy runs on a private Docker network.
+- Server access goes through AWS Systems Manager Session Manager; SSH is closed.
+- On startup, system database migrations run first, then per-tenant migrations for every configured tenant.
 
 ## Repository layout
 
 | Path | Purpose |
-| --- | --- |
+|---|---|
 | `backend-master/arcade` | Main browser-facing REST API |
-| `backend-master/core` | Domain models, tenant routing, services, migrations, security, and AI provider abstraction |
-| `backend-master/connector` | Connector framework and connector implementations |
+| `backend-master/core` | Domain models, tenant routing, services, migrations, security, AI provider abstraction |
+| `backend-master/connector` | Connector framework and implementations |
 | `backend-master/dbm` | System and per-tenant MongoDB migrations |
 | `backend-master/viper` | Sync processing workers |
 | `backend-master/karibu` | Additional API surface |
-| `spectrum-master` | React/TypeScript application |
+| `spectrum-master` | React/TypeScript operator console |
 | `spectrum-master/proxy` | Node.js reverse proxy and static frontend runtime |
-| `infrastructure/aws` | CloudFormation, deployment scripts, operations, monitoring, backups, and cost controls |
-| `demo` | Private demo support material that contains no credentials |
-| `design-system` | NextEdge AI visual system and UI guidance |
+| `infrastructure/aws` | CloudFormation, deployment scripts, monitoring, backups, cost controls |
+| `design-system` | Visual system and UI guidelines |
 
-## Runtime architecture
+## Running it locally
 
-The demo uses Docker Compose on the dedicated EC2 instance. Only the web proxy is exposed on port 80; databases and backend services remain on a private Docker network. Administration uses AWS Systems Manager Session Manager—SSH is not open.
-
-MongoDB contains one system database and a separate database for each NextEdge ID. Startup runs system migrations first, then customer migrations for every configured tenant. The live verification suite logs in as two independent users and tests that neither tenant can read the other tenant's resources.
-
-The current compatibility services emulate the subset of Google Pub/Sub, object storage, and analytical APIs required by legacy modules. They are private implementation details and can be replaced incrementally without changing the public NextEdge AI interface.
-
-## Build
-
-Backend prerequisites: Java 11 and Maven 3.8+.
+**Backend** (Java 11, Maven 3.8+):
 
 ```bash
 cd backend-master
@@ -50,7 +78,7 @@ mvn clean test
 mvn clean package -DskipTests
 ```
 
-Frontend prerequisites: Node.js 20.18.3 and npm 10.8.2.
+**Frontend** (Node.js 20.18.3, npm 10.8.2):
 
 ```bash
 cd spectrum-master
@@ -61,16 +89,16 @@ npm run proxy-build
 npm run build
 ```
 
-Never place credentials in local properties, Compose files, source, test fixtures, or GitHub configuration. AWS deployments retrieve generated values from Secrets Manager at runtime.
+**Full stack:** `docker-compose up` from the repository root.
 
-## Deploy
+Credentials are never stored in source, config files or GitHub. Deployed environments read them from AWS Secrets Manager at runtime.
 
-The AWS resources, deployment workflow, cost controls, and operational commands are documented in [`infrastructure/aws/README.md`](infrastructure/aws/README.md). The GitHub Actions deployment uses short-lived OIDC credentials and SSM; no long-lived AWS key is stored in GitHub.
+## Deployment
 
-## Compatibility boundary
+Pushing to `main` triggers a GitHub Actions workflow that authenticates to AWS with short-lived OIDC credentials and deploys through SSM. Full details are in [`infrastructure/aws/README.md`](infrastructure/aws/README.md).
 
-Some internal package names, persisted fields, collection names, and API contracts still contain the historical `syncari` token. They are not user-visible branding. They remain temporarily to preserve binary, database, and integration compatibility while `nextEdgeId` is written and exposed to users. Do not bulk-rename these internals without a versioned data and API migration.
+The live demo runs on a single EC2 instance in `ap-south-1`. It is a demo environment, not a high-availability production setup.
 
 ## Security
 
-See [`SECURITY.md`](SECURITY.md). Every push is scanned for secrets, production dependency critical findings, and build/test failures. Known legacy frontend dependencies are tracked separately and must be upgraded through tested component migrations rather than an unsafe forced audit rewrite.
+Every push is scanned for leaked secrets, critical dependency vulnerabilities, and build or test failures.
